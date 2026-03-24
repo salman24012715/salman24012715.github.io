@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salman Khalid, MBBS | Research &amp; Data Science Portfolio</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#050508;--surface:#0a0b10;--card:#10121a;--card2:#161a26;
+  --border:#1a1e2e;--border-hi:#262d42;
+  --text:#b0b5c4;--text-dim:#5c6478;--heading:#e4e6ee;--white:#f2f3f7;
+  --accent:#4fc3f7;--accent2:#0288d1;--gold:#e8b94a;--teal:#26a69a;
+  --green:#66bb6a;--coral:#ef5350;--lavender:#ab94f4;--steel:#78909c;
+  --code-bg:#08090d;--code-border:#141824;
+  --font-display:Georgia,"Times New Roman",serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"SF Mono","Cascadia Code","Fira Code",Consolas,monospace;
+}
+html{scroll-behavior:smooth;font-size:14.5px}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;overflow-x:hidden}
+
+/* === HEADER === */
+.hd{position:sticky;top:0;z-index:100;background:rgba(5,5,8,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.6rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.hd-name{font-family:var(--font-display);font-size:1.15rem;color:var(--heading);font-weight:700;letter-spacing:.03em}
+.hd-name .deg{color:var(--accent);font-weight:400;font-size:.88rem;margin-left:.3rem}
+.hd-tag{font-size:.6rem;color:var(--text-dim);letter-spacing:.14em;text-transform:uppercase;margin-top:.1rem}
+.hd-links{display:flex;gap:1.2rem;align-items:center}
+.hd-links a{color:var(--steel);text-decoration:none;font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;transition:color .2s;font-weight:500}
+.hd-links a:hover{color:var(--accent)}
+
+/* === HERO === */
+.hero{text-align:center;padding:3.5rem 2rem 2.5rem;position:relative;background:radial-gradient(ellipse at 50% 0%,rgba(79,195,247,.035) 0%,transparent 55%)}
+.hero::after{content:"";position:absolute;bottom:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.hero-label{display:inline-block;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(79,195,247,.18);padding:.18rem .75rem;border-radius:2px;margin-bottom:.9rem}
+.hero h1{font-family:var(--font-display);font-size:2.3rem;color:var(--white);font-weight:400;margin-bottom:.3rem;letter-spacing:-.01em}
+.hero h1 strong{font-weight:700}
+.hero .sub{color:var(--text-dim);font-size:.82rem;margin-bottom:1.1rem;letter-spacing:.025em}
+.hero .desc{color:var(--text);font-size:.86rem;max-width:640px;margin:0 auto;line-height:1.75;opacity:.85}
+
+/* === METRICS === */
+.metrics{display:flex;justify-content:center;gap:0;padding:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface)}
+.mt{flex:1;text-align:center;padding:.9rem .4rem;border-right:1px solid var(--border);max-width:145px}
+.mt:last-child{border-right:none}
+.mt .n{font-family:var(--font-display);font-size:1.3rem;color:var(--accent);font-weight:700}
+.mt .l{font-size:.55rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.12em;margin-top:.1rem}
+
+/* === TABS === */
+.tc{max-width:940px;margin:1.8rem auto;padding:0 1.5rem}
+.tn{display:flex;gap:0;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
+.tn::-webkit-scrollbar{display:none}
+.tb{background:none;border:none;border-bottom:2px solid transparent;color:var(--text-dim);font-family:var(--font-body);font-size:.7rem;padding:.65rem 1.05rem;cursor:pointer;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;transition:all .2s;font-weight:500}
+.tb.a{color:var(--accent);border-bottom-color:var(--accent)}
+.tb:hover{color:var(--heading)}
+
+.tp{display:none;padding:1.6rem 0;animation:fi .3s ease}
+.tp.a{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+
+/* === SECTIONS === */
+.st{font-family:var(--font-display);font-size:1.3rem;color:var(--heading);font-weight:400;margin-bottom:1.1rem;padding-bottom:.35rem;border-bottom:1px solid var(--border)}
+.si{color:var(--text-dim);font-size:.82rem;margin-bottom:1.2rem;line-height:1.75}
+
+/* === SKILL GRID === */
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:.7rem}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:.85rem 1rem;transition:border-color .2s}
+.sc:hover{border-color:var(--accent)}
+.sc h4{font-size:.8rem;color:var(--heading);margin-bottom:.15rem;font-weight:600}
+.sc p{font-size:.72rem;color:var(--text-dim);line-height:1.6}
+.tg{display:inline-block;font-size:.56rem;padding:.1rem .38rem;border-radius:2px;margin-top:.3rem;margin-right:.18rem;background:rgba(79,195,247,.05);border:1px solid rgba(79,195,247,.1);color:var(--accent);font-weight:500;letter-spacing:.03em}
+.tg.g{background:rgba(232,185,74,.05);border-color:rgba(232,185,74,.12);color:var(--gold)}
+.tg.t{background:rgba(38,166,154,.05);border-color:rgba(38,166,154,.12);color:var(--teal)}
+.tg.v{background:rgba(171,148,244,.05);border-color:rgba(171,148,244,.12);color:var(--lavender)}
+
+/* === CODE === */
+.cb{background:var(--code-bg);border:1px solid var(--code-border);border-radius:5px;overflow:hidden;margin:1rem 0}
+.ch{display:flex;align-items:center;justify-content:space-between;padding:.4rem .85rem;background:rgba(255,255,255,.012);border-bottom:1px solid var(--code-border)}
+.ch .lg{font-size:.58rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.ch .fl{font-size:.62rem;color:var(--text-dim);opacity:.45;font-family:var(--font-mono)}
+.ch .dots{display:flex;gap:4px}.ch .dots span{width:7px;height:7px;border-radius:50%}
+.ch .dots span:nth-child(1){background:#ef5350}.ch .dots span:nth-child(2){background:#e8b94a}.ch .dots span:nth-child(3){background:#66bb6a}
+.cd{padding:.85rem .95rem;overflow-x:auto;font-family:var(--font-mono);font-size:.71rem;line-height:1.7;color:#abb2bf;white-space:pre}
+.cd .kw{color:#c678dd}.cd .fn{color:#61afef}.cd .s{color:#98c379}
+.cd .cm{color:#5c6370;font-style:italic}.cd .nu{color:#d19a66}.cd .vr{color:#e06c75}.cd .op{color:#56b6c2}
+.cd .an{color:#e5c07b}
+.cn{background:var(--card);border-left:3px solid var(--accent);padding:.55rem .85rem;margin:.5rem 0;font-size:.72rem;color:var(--text-dim);line-height:1.6;border-radius:0 3px 3px 0}
+.cn strong{color:var(--heading);font-weight:600}
+
+/* === PROJECTS === */
+.pc{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1.1rem;margin-bottom:.9rem;transition:border-color .2s;position:relative;overflow:hidden}
+.pc:hover{border-color:var(--accent)}
+.pc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
+.pc:nth-child(2)::before{background:var(--accent)}.pc:nth-child(3)::before{background:var(--gold)}
+.pc:nth-child(4)::before{background:var(--teal)}.pc:nth-child(5)::before{background:var(--lavender)}
+.pc:nth-child(6)::before{background:var(--green)}.pc:nth-child(7)::before{background:var(--coral)}
+.pc h4{font-size:.92rem;color:var(--heading);margin-bottom:.18rem;font-weight:600}
+.pc .pm{font-size:.6rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.45rem;font-weight:500}
+.pc p{font-size:.78rem;color:var(--text);line-height:1.7}
+.pc .tl{margin-top:.45rem;display:flex;flex-wrap:wrap;gap:.2rem}
+
+/* === PUBLICATIONS === */
+.pe{padding:.95rem 0;border-bottom:1px solid var(--border)}
+.pe:last-child{border-bottom:none}
+.pe .jn{font-size:.58rem;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.18rem;font-weight:600}
+.pe h4{font-size:.86rem;color:var(--heading);font-weight:500;line-height:1.55;margin-bottom:.12rem}
+.pe .au{font-size:.72rem;color:var(--text-dim)}
+.pe .au strong{color:var(--gold);font-weight:600}
+.pe .doi{font-size:.66rem;color:var(--text-dim);margin-top:.18rem}
+.pe .doi a{color:var(--lavender);text-decoration:none}.pe .doi a:hover{text-decoration:underline}
+
+/* === PIPELINE === */
+.pb{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1.1rem;margin-bottom:.9rem}
+.pb h4{font-size:.92rem;color:var(--heading);margin-bottom:.35rem;font-weight:600}
+.pb p{font-size:.78rem;line-height:1.7;color:var(--text)}
+.ps{display:flex;gap:1.1rem;flex-wrap:wrap;margin-top:.6rem}
+.ps .v{text-align:center}
+.ps .v .n{font-family:var(--font-display);font-size:1.05rem;color:var(--accent);font-weight:700}
+.ps .v .l{font-size:.52rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em}
+
+/* === CONTACT === */
+.ct{max-width:940px;margin:2.2rem auto;padding:0 1.5rem;text-align:center}
+.ct h3{font-family:var(--font-display);font-size:1.15rem;color:var(--heading);font-weight:400;margin-bottom:.5rem}
+.ct p{color:var(--text-dim);font-size:.8rem;margin-bottom:.12rem}
+.ct a{color:var(--accent);text-decoration:none}.ct a:hover{text-decoration:underline}
+.ft{text-align:center;padding:1.3rem;font-size:.58rem;color:var(--text-dim);border-top:1px solid var(--border);margin-top:1.3rem;letter-spacing:.07em;text-transform:uppercase}
+
+/* === APP SHOWCASE === */
+.app-hero{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1.3rem;margin-bottom:1.2rem;position:relative;overflow:hidden}
+.app-hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
+.app-hero h4{font-size:1rem;color:var(--heading);font-weight:700;margin-bottom:.15rem}
+.app-hero .app-sub{font-size:.68rem;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.6rem;font-weight:500}
+.app-hero>p{font-size:.8rem;color:var(--text);line-height:1.7;margin-bottom:.6rem}
+.app-section{margin-top:1rem}
+.app-section h5{font-size:.78rem;color:var(--heading);font-weight:600;margin-bottom:.4rem;padding-bottom:.2rem;border-bottom:1px solid var(--border)}
+.app-section ul{list-style:none;padding:0}
+.app-section li{font-size:.74rem;color:var(--text-dim);line-height:1.65;padding:.18rem 0 .18rem 1rem;position:relative}
+.app-section li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-size:.65rem}
+.app-section li strong{color:var(--text);font-weight:500}
+.app-stack{display:flex;flex-wrap:wrap;gap:.2rem;margin-top:.5rem}
+.app-divider{border:none;border-top:1px solid var(--border);margin:1.5rem 0}
+.app-scale{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.6rem;padding:.6rem .8rem;background:rgba(79,195,247,.03);border:1px solid rgba(79,195,247,.08);border-radius:4px}
+.app-scale .s-item{text-align:center}
+.app-scale .s-val{font-family:var(--font-display);font-size:1rem;color:var(--accent);font-weight:700}
+.app-scale .s-lbl{font-size:.52rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em}
+
+/* === RESPONSIVE === */
+@media(max-width:640px){.hd{padding:.5rem 1rem;flex-direction:column;gap:.3rem}.hero h1{font-size:1.6rem}.metrics{flex-wrap:wrap}.mt{min-width:75px}.tb{font-size:.6rem;padding:.5rem .65rem}.sg{grid-template-columns:1fr}}
+@media print{body{background:#fff;color:#222}.hd{position:static;background:#fff}.tp{display:block!important}.tn{display:none}.cb{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hd">
+  <div>
+    <div class="hd-name">SALMAN KHALID<span class="deg">MBBS</span></div>
+    <div class="hd-tag">Physician-Researcher &middot; Data Scientist &middot; Aspiring Neurosurgeon</div>
+  </div>
+  <nav class="hd-links">
+    <a href="mailto:salmankhalid@kemu.edu.pk">Email</a>
+    <a href="https://orcid.org/0009-0009-4871-7958">ORCID</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">Research Portfolio 2025&ndash;2026</div>
+  <h1>Surgical Research &amp; <strong>Computational Medicine</strong></h1>
+  <p class="sub">King Edward Medical University &rsquo;24 &middot; USMLE Step 1 &middot; J-1 Visa Eligible</p>
+  <p class="desc">I apply quantitative methods and data engineering to clinical research questions&mdash;from pharmacovigilance signal detection across global safety databases to systematic evidence synthesis in surgical subspecialties. Seeking a research position where I can contribute computational skills to an investigator&rsquo;s program while training toward a career in academic neurosurgery.</p>
+</section>
+
+<!-- METRICS -->
+<div class="metrics">
+  <div class="mt"><div class="n">8,700+</div><div class="l">Subjects Analyzed</div></div>
+  <div class="mt"><div class="n">35</div><div class="l">RCTs Reviewed</div></div>
+  <div class="mt"><div class="n">3</div><div class="l">Publications</div></div>
+  <div class="mt"><div class="n">18</div><div class="l">Pipeline Modules</div></div>
+  <div class="mt"><div class="n">4</div><div class="l">PV Databases</div></div>
+  <div class="mt"><div class="n">50+</div><div class="l">Visualizations</div></div>
+</div>
+
+<!-- TABS -->
+<div class="tc">
+  <nav class="tn" role="tablist">
+    <button class="tb a" data-t="about">About</button>
+    <button class="tb" data-t="skills">Technical Skills</button>
+    <button class="tb" data-t="projects">Projects</button>
+    <button class="tb" data-t="code">Code Samples</button>
+    <button class="tb" data-t="pubs">Publications</button>
+    <button class="tb" data-t="pipeline">PV Pipeline</button>
+    <button class="tb" data-t="apps">Applications</button>
+  </nav>
+
+  <!-- ===== ABOUT ===== -->
+  <div class="tp a" id="about">
+    <h3 class="st">Background</h3>
+    <p class="si">I graduated from King Edward Medical University (KEMU) in 2024&mdash;one of the most competitive medical programs in South Asia with a &lt;2% acceptance rate. During clinical training at Mayo Hospital (one of the largest tertiary centers in the region) and through self-directed study afterward, I developed a focused interest in applying computational methods to surgical and clinical research problems.</p>
+    <p class="si">My long-term goal is academic neurosurgery&mdash;combining surgical training with data-driven research to improve patient outcomes. In the near term, I am seeking a J-1 visa&ndash;sponsored research position where I can contribute meaningfully to an investigator&rsquo;s program while building the research foundation for a competitive residency application.</p>
+
+    <h3 class="st" style="margin-top:1.6rem">What I Bring to a Research Team</h3>
+    <div class="sg">
+      <div class="sc">
+        <h4>Quantitative Analysis</h4>
+        <p>Hands-on experience with meta-analytic models, survival analysis, mixed-effects regression, and propensity score methods&mdash;applied to real published studies, not just coursework.</p>
+      </div>
+      <div class="sc">
+        <h4>Data Engineering</h4>
+        <p>Can build ETL pipelines, wrangle messy clinical data, and deliver clean analytical datasets. Comfortable with SQL, Python/pandas, DuckDB, and Parquet at scale.</p>
+      </div>
+      <div class="sc">
+        <h4>Clinical Judgment</h4>
+        <p>MBBS training means I understand endpoints, study design, IRB requirements, and can communicate findings to both clinical and technical audiences.</p>
+      </div>
+      <div class="sc">
+        <h4>Writing &amp; Communication</h4>
+        <p>Three peer-reviewed publications as first author. Familiar with manuscript preparation, journal correspondence, and structured scientific writing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SKILLS ===== -->
+  <div class="tp" id="skills">
+    <h3 class="st">Data Science &amp; Analytics</h3>
+    <div class="sg">
+      <div class="sc"><h4>Statistical Modeling &amp; Regression</h4><p>Linear, logistic, ordinal, and multinomial regression. Cox proportional hazards and accelerated failure time models for time-to-event data. Propensity score matching (PSM) and inverse probability of treatment weighting (IPTW) for causal inference from observational cohorts. Bayesian regression via Stan/brms.</p><span class="tg">R</span><span class="tg">Python</span><span class="tg">statsmodels</span><span class="tg">SPSS</span></div>
+      <div class="sc"><h4>Meta-Analysis &amp; Evidence Synthesis</h4><p>Pairwise random/fixed-effects models (REML, DerSimonian-Laird, Paule-Mandel). Network meta-analysis with SUCRA rankings. I&sup2; heterogeneity quantification, meta-regression for moderator analysis, prediction intervals, and GRADE evidence-quality grading. Publication bias detection via Egger&rsquo;s test, trim-and-fill, DOI plots, and LFK index.</p><span class="tg g">metafor</span><span class="tg g">netmeta</span><span class="tg g">meta</span><span class="tg g">RevMan</span><span class="tg g">RoBMA</span></div>
+      <div class="sc"><h4>Survival Analysis</h4><p>Kaplan-Meier estimation with log-rank tests, Cox PH regression with Schoenfeld residual diagnostics, competing risks (Fine-Gray), and landmark analysis. Experience with surgical time-to-complication and time-to-readmission endpoints.</p><span class="tg">survival</span><span class="tg">survminer</span><span class="tg">cmprsk</span></div>
+      <div class="sc"><h4>Machine Learning &amp; Predictive Modeling</h4><p>Supervised classification (Random Forest, XGBoost, SVM, logistic) and regression (ElasticNet, gradient boosting). Nested cross-validation to prevent optimistic bias. Hyperparameter tuning via GridSearchCV/Optuna. SHAP for interpretable feature importance&mdash;essential for clinical adoption of ML risk models.</p><span class="tg">scikit-learn</span><span class="tg">XGBoost</span><span class="tg">SHAP</span><span class="tg">Optuna</span></div>
+      <div class="sc"><h4>NLP &amp; Clinical Text Mining</h4><p>Named entity recognition (NER) on operative notes using biomedical spaCy models (en_core_sci_lg). TF-IDF vectorization and topic modeling for literature clustering. Regex-based extraction of structured fields (tumor size, extent of resection, pathology) from free-text clinical narratives.</p><span class="tg">spaCy</span><span class="tg">NLTK</span><span class="tg">regex</span><span class="tg">Hugging Face</span></div>
+      <div class="sc"><h4>Causal Inference Methods</h4><p>Propensity score matching and IPTW with covariate balance diagnostics (Love plots, SMD). Instrumental variables, difference-in-differences, and regression discontinuity designs. DAG-based confounding analysis. E-value sensitivity analysis for unmeasured confounders. Marginal structural models (MSM) for time-varying treatments.</p><span class="tg g">MatchIt</span><span class="tg g">WeightIt</span><span class="tg g">EValue</span><span class="tg">DoWhy</span><span class="tg g">ipw</span></div>
+      <div class="sc"><h4>Pharmacovigilance &amp; Signal Detection</h4><p>Disproportionality analysis (PRR, ROR, EBGM) across FAERS, EudraVigilance, VigiBase, and PMDA databases. Temporal signal tracking (quarter-over-quarter evolution). Multi-measure thresholding to reduce false positives. Built a complete 18-module automated pipeline for post-market surveillance.</p><span class="tg">FAERS</span><span class="tg">VigiBase</span><span class="tg">EudraVigilance</span><span class="tg">DuckDB</span></div>
+      <div class="sc"><h4>Complex Survey &amp; Registry Analysis</h4><p>Survey-weighted regression for national databases (NSQIP, NHANES, NIS, MEPS) accounting for strata, PSUs, and sampling weights. Quasibinomial family for overdispersion. Marginal effects for interpretable treatment comparisons. Essential for any surgical outcomes study using administrative data.</p><span class="tg g">survey</span><span class="tg">marginaleffects</span></div>
+      <div class="sc"><h4>Mixed-Effects &amp; Longitudinal Modeling</h4><p>Linear and generalized linear mixed models (lme4/lmerTest) for repeated measures and hierarchical data. Random intercepts for patient-level clustering, random slopes for treatment-by-time interactions. Applied to multi-site trials and longitudinal neurosurgical outcomes (GCS, mRS, KPS trajectories).</p><span class="tg g">lme4</span><span class="tg g">lmerTest</span><span class="tg">MixedLM</span></div>
+      <div class="sc"><h4>Data Visualization &amp; Dashboards</h4><p>Publication-quality static figures (forest plots, Kaplan-Meier curves, volcano plots, heatmaps). Interactive dashboards with plotly and R Shiny. Multi-panel layouts for journal submissions. Geospatial mapping for epidemiological distributions.</p><span class="tg g">ggplot2</span><span class="tg">matplotlib</span><span class="tg">plotly</span><span class="tg">R Shiny</span></div>
+      <div class="sc"><h4>Bioinformatics Foundations</h4><p>Familiarity with RNA-seq differential expression (DESeq2), pathway enrichment (GSEA, GO), multi-omics data integration concepts, spatial transcriptomics workflows, and variant annotation tools. Exposure to Bioconductor ecosystem.</p><span class="tg v">Bioconductor</span><span class="tg v">DESeq2</span><span class="tg v">clusterProfiler</span></div>
+      <div class="sc"><h4>Reproducible Research &amp; Reporting</h4><p>Parameterized R Markdown and Quarto reports that interweave code, output, and narrative. Jupyter notebooks for exploratory analysis. Docker containers for reproducible environments. Git version control with branching workflows. Automated PDF report generation via Jinja2 templates.</p><span class="tg t">Quarto</span><span class="tg t">Docker</span><span class="tg t">Git</span><span class="tg t">Jinja2</span></div>
+    </div>
+
+    <h3 class="st" style="margin-top:1.8rem">Programming &amp; Tools</h3>
+    <div class="sg">
+      <div class="sc"><h4>Python</h4><p>pandas, NumPy, scikit-learn, asyncio, aiohttp, BeautifulSoup, Anthropic SDK. Primary language for data pipelines and automation.</p></div>
+      <div class="sc"><h4>R / Tidyverse</h4><p>dplyr, ggplot2, tidyr, purrr, metafor, survival, netmeta. Primary language for statistical analysis and publication figures.</p></div>
+      <div class="sc"><h4>SQL</h4><p>Complex joins, CTEs, window functions, DuckDB for analytical workloads. FAERS/pharmacovigilance database querying at scale.</p></div>
+      <div class="sc"><h4>Shell &amp; DevOps</h4><p>Bash/Zsh scripting, Git version control, GitHub, Docker containers, CI/CD fundamentals, cron automation.</p></div>
+      <div class="sc"><h4>Scientific Writing</h4><p>LaTeX, R Markdown, Quarto, BibTeX. Experienced with journal submission systems (ScholarOne, Editorial Manager).</p></div>
+      <div class="sc"><h4>Additional</h4><p>C++ fundamentals, CUDA concepts, REST APIs, web scraping, SMTP automation, cloud basics (AWS/GCP).</p></div>
+    </div>
+
+    <h3 class="st" style="margin-top:1.8rem">Research Methodology</h3>
+    <div class="sg">
+      <div class="sc"><h4>Systematic Reviews</h4><p>PRISMA 2020 protocol, multi-database searches, screening pipelines, data extraction, risk-of-bias (RoB 2, ROBINS-I).</p></div>
+      <div class="sc"><h4>Study Design</h4><p>Protocol development, power analysis, sample size calculation, randomization, blinding, endpoint definition.</p></div>
+      <div class="sc"><h4>Regulatory &amp; Ethics</h4><p>IRB application preparation, informed consent design, HIPAA awareness, GCP familiarity.</p></div>
+      <div class="sc"><h4>Literature Synthesis</h4><p>PubMed, Embase, Cochrane, Scopus searches. Zotero/Mendeley reference management. GRADE evidence grading.</p></div>
+      <div class="sc"><h4>Manuscript Lifecycle</h4><p>Drafting, co-author coordination, figure preparation, reviewer responses, journal selection strategy.</p></div>
+      <div class="sc"><h4>Grant Writing Foundations</h4><p>NIH-style specific aims, significance, innovation, and approach sections. Familiar with R01/K-series structure.</p></div>
+    </div>
+  </div>
+
+  <!-- ===== PROJECTS ===== -->
+  <div class="tp" id="projects">
+    <h3 class="st">Selected Projects</h3>
+
+    <div class="pc">
+      <div class="pm">Pharmacovigilance &middot; Python &middot; SQL &middot; 2024&ndash;Present</div>
+      <h4>Automated PV Signal Detection Pipeline (v3.3)</h4>
+      <p>Designed and built an 18-module pipeline that ingests adverse event data from FAERS, EudraVigilance, VigiBase, and PMDA into a unified DuckDB/Parquet warehouse. Computes disproportionality measures (PRR, ROR, EBGM) with automated signal flagging, temporal trend analysis, and parameterized PDF reporting. Every run is version-stamped for full provenance.</p>
+      <div class="tl"><span class="tg">Python</span><span class="tg">DuckDB</span><span class="tg">Parquet</span><span class="tg">asyncio</span><span class="tg">Jinja2</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pm">Meta-Analysis &middot; R &middot; Published 2024</div>
+      <h4>Esketamine for Postpartum Depression &mdash; Systematic Review &amp; Meta-Analysis</h4>
+      <p>PRISMA-guided systematic review of 6 RCTs (n=8,700+ subjects) evaluating esketamine efficacy in PPD. Random-effects meta-analysis with REML estimation, subgroup analyses by dose/route/timing, forest and funnel plots, and GRADE evidence tables. Published in Cureus.</p>
+      <div class="tl"><span class="tg g">R</span><span class="tg g">metafor</span><span class="tg">RevMan</span><span class="tg">PRISMA</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pm">Network Meta-Analysis &middot; R + Python &middot; Accepted 2025</div>
+      <h4>Tegoprazan vs. Conventional PPIs &mdash; Systematic Review &amp; Network Meta-Analysis</h4>
+      <p>Analyzed 35 RCTs comparing tegoprazan to standard PPIs for acid-related disorders. Built pairwise and network meta-analysis models, generated SUCRA rankings, and assessed publication bias with contour-enhanced funnel plots. Accepted in J. Clinical Gastroenterology &amp; Hepatology.</p>
+      <div class="tl"><span class="tg">Python</span><span class="tg g">R</span><span class="tg g">netmeta</span><span class="tg">SUCRA</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pm">Ophthalmology &middot; Under Peer Review &middot; 2025</div>
+      <h4>Lifitegrast for Dry Eye Disease &mdash; Meta-Analysis</h4>
+      <p>Systematic review evaluating lifitegrast efficacy across multiple RCTs with sensitivity analyses and GRADE evidence quality assessment. Currently under peer review.</p>
+      <div class="tl"><span class="tg g">R</span><span class="tg g">metafor</span><span class="tg">GRADE</span></div>
+    </div>
+  </div>
+
+  <!-- ===== CODE SAMPLES ===== -->
+  <div class="tp" id="code">
+    <h3 class="st">Code Samples</h3>
+    <p class="si">Annotated, production-ready snippets covering causal inference, complex survey analysis, mixed-effects modeling, machine learning, NLP, and advanced epidemiological methods&mdash;the core analytical toolkit for surgical outcomes and clinical research.</p>
+
+    <!-- ━━━ 1. PROPENSITY SCORE MATCHING ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">propensity_score_matching.R</span></div>
+      <div class="cd"><span class="cm"># ── Propensity Score Matching (PSM) ─────────────────────</span>
+<span class="cm"># Gold standard for reducing selection bias in observational</span>
+<span class="cm"># surgical studies (e.g., open vs minimally invasive approach)</span>
+
+<span class="kw">library</span>(<span class="fn">MatchIt</span>)
+<span class="kw">library</span>(<span class="fn">cobalt</span>)
+
+<span class="cm"># 1. Perform 1:1 nearest-neighbor matching on logistic PS</span>
+psm_match <span class="op">&lt;-</span> <span class="fn">matchit</span>(
+  treat <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> comorbidity <span class="op">+</span> baseline_score,
+  data     <span class="op">=</span> df,
+  method   <span class="op">=</span> <span class="s">"nearest"</span>,
+  distance <span class="op">=</span> <span class="s">"glm"</span>,      <span class="cm"># logistic regression for PS</span>
+  caliper  <span class="op">=</span> <span class="nu">0.2</span>,        <span class="cm"># standardized caliper</span>
+  ratio    <span class="op">=</span> <span class="nu">1</span>
+)
+
+<span class="cm"># 2. Check covariate balance (SMD &lt; 0.1 = good)</span>
+<span class="fn">love.plot</span>(psm_match,
+  vars       <span class="op">=</span> <span class="fn">c</span>(<span class="s">"age"</span>, <span class="s">"sex"</span>, <span class="s">"comorbidity"</span>, <span class="s">"baseline_score"</span>),
+  thresholds <span class="op">=</span> <span class="fn">c</span>(maha <span class="op">=</span> <span class="nu">.1</span>),
+  abs        <span class="op">=</span> <span class="an">TRUE</span>
+)
+
+<span class="cm"># 3. Extract matched cohort &amp; analyze</span>
+matched_data <span class="op">&lt;-</span> <span class="fn">match.data</span>(psm_match)
+model_psm    <span class="op">&lt;-</span> <span class="fn">lm</span>(y <span class="op">~</span> treat, data <span class="op">=</span> matched_data, weights <span class="op">=</span> weights)
+<span class="fn">summary</span>(model_psm)</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> PSM is the workhorse of observational surgical research&mdash;comparing outcomes between techniques when randomization is infeasible. The Love plot for covariate balance and 0.2 standardized caliper are best practices per Austin (2011). Directly applicable to neurosurgical outcomes (e.g., comparing craniotomy approaches for tumor resection).</div>
+
+    <!-- ━━━ 1b. PSM Python ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">propensity_score_matching.py</span></div>
+      <div class="cd"><span class="cm"># ── PSM in Python (scikit-learn based) ──────────────────</span>
+
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">from</span> sklearn.linear_model <span class="kw">import</span> LogisticRegression
+<span class="kw">from</span> sklearn.neighbors <span class="kw">import</span> NearestNeighbors
+
+<span class="cm"># Estimate propensity scores via logistic regression</span>
+X <span class="op">=</span> df[[<span class="s">'age'</span>, <span class="s">'sex'</span>, <span class="s">'comorbidity'</span>, <span class="s">'baseline_score'</span>]]
+ps_model <span class="op">=</span> LogisticRegression()
+df[<span class="s">'propensity_score'</span>] <span class="op">=</span> ps_model.<span class="fn">fit</span>(X, df[<span class="s">'treat'</span>]).<span class="fn">predict_proba</span>(X)[:, <span class="nu">1</span>]
+
+<span class="cm"># 1:1 nearest-neighbor matching without replacement</span>
+treated <span class="op">=</span> df[df[<span class="s">'treat'</span>] <span class="op">==</span> <span class="nu">1</span>].<span class="fn">sort_values</span>(<span class="s">'propensity_score'</span>)
+control <span class="op">=</span> df[df[<span class="s">'treat'</span>] <span class="op">==</span> <span class="nu">0</span>].<span class="fn">sort_values</span>(<span class="s">'propensity_score'</span>)
+
+matched_idx <span class="op">=</span> []
+<span class="kw">for</span> _, row <span class="kw">in</span> treated.<span class="fn">iterrows</span>():
+    nearest <span class="op">=</span> (control[<span class="s">'propensity_score'</span>] <span class="op">-</span> row[<span class="s">'propensity_score'</span>]).<span class="fn">abs</span>().<span class="fn">idxmin</span>()
+    matched_idx.<span class="fn">append</span>(nearest)
+    control <span class="op">=</span> control.<span class="fn">drop</span>(nearest)
+
+matched_data <span class="op">=</span> pd.<span class="fn">concat</span>([treated, df.<span class="fn">loc</span>[matched_idx]])</div>
+    </div>
+
+    <!-- ━━━ 2. IPTW ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">iptw_analysis.R</span></div>
+      <div class="cd"><span class="cm"># ── Inverse Probability of Treatment Weighting (IPTW) ──</span>
+<span class="cm"># Retains full sample size (vs. matching which discards data)</span>
+<span class="cm"># Estimates Average Treatment Effect (ATE)</span>
+
+<span class="kw">library</span>(<span class="fn">WeightIt</span>)
+<span class="kw">library</span>(<span class="fn">survey</span>)
+
+<span class="cm"># 1. Generate stabilized IP weights</span>
+wt_model <span class="op">&lt;-</span> <span class="fn">weightit</span>(
+  treat <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> comorbidity <span class="op">+</span> baseline_score,
+  data     <span class="op">=</span> df,
+  method   <span class="op">=</span> <span class="s">"ps"</span>,
+  estimand <span class="op">=</span> <span class="s">"ATE"</span>
+)
+df<span class="op">$</span>weights <span class="op">&lt;-</span> wt_model<span class="op">$</span>weights
+
+<span class="cm"># 2. Weighted outcome model via survey design</span>
+design <span class="op">&lt;-</span> <span class="fn">svydesign</span>(ids <span class="op">=</span> <span class="op">~</span><span class="nu">1</span>, data <span class="op">=</span> df, weights <span class="op">=</span> <span class="op">~</span>weights)
+weighted_model <span class="op">&lt;-</span> <span class="fn">svyglm</span>(y <span class="op">~</span> treat, design <span class="op">=</span> design, family <span class="op">=</span> <span class="fn">gaussian</span>())
+<span class="fn">summary</span>(weighted_model)
+
+<span class="cm"># 3. Verify balance after weighting</span>
+<span class="fn">love.plot</span>(wt_model, thresholds <span class="op">=</span> <span class="fn">c</span>(maha <span class="op">=</span> <span class="nu">.1</span>))</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> IPTW is preferred over PSM when sample size is limited (common in neurosurgical cohorts). It creates a pseudo-population where treatment assignment is independent of measured confounders, preserving statistical power by retaining every observation.</div>
+
+    <!-- ━━━ 2b. IPTW Python ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">iptw_analysis.py</span></div>
+      <div class="cd"><span class="kw">import</span> numpy <span class="kw">as</span> np
+<span class="kw">import</span> statsmodels.api <span class="kw">as</span> sm
+<span class="kw">from</span> sklearn.linear_model <span class="kw">import</span> LogisticRegression
+
+<span class="cm"># Propensity scores</span>
+ps <span class="op">=</span> LogisticRegression().<span class="fn">fit</span>(X, df[<span class="s">'treat'</span>]).<span class="fn">predict_proba</span>(X)[:, <span class="nu">1</span>]
+
+<span class="cm"># IPTW weights: 1/ps if treated, 1/(1-ps) if control</span>
+df[<span class="s">'weights'</span>] <span class="op">=</span> np.<span class="fn">where</span>(df[<span class="s">'treat'</span>] <span class="op">==</span> <span class="nu">1</span>, <span class="nu">1</span>/ps, <span class="nu">1</span>/(<span class="nu">1</span><span class="op">-</span>ps))
+
+<span class="cm"># Weighted least squares outcome regression</span>
+wls <span class="op">=</span> sm.<span class="fn">WLS</span>(df[<span class="s">'y'</span>], sm.<span class="fn">add_constant</span>(df[<span class="s">'treat'</span>]),
+            weights<span class="op">=</span>df[<span class="s">'weights'</span>]).<span class="fn">fit</span>()
+<span class="fn">print</span>(wls.<span class="fn">summary</span>())</div>
+    </div>
+
+    <!-- ━━━ 3. COMPLEX SURVEY REGRESSION ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">complex_survey_regression.R</span></div>
+      <div class="cd"><span class="cm"># ── Complex Survey Analysis (NSQIP / NHANES) ──────────</span>
+<span class="cm"># Ignoring strata/clusters/weights = incorrect SEs</span>
+<span class="cm"># Essential for any national database analysis</span>
+
+<span class="kw">library</span>(<span class="fn">survey</span>)
+
+<span class="cm"># Define survey design (strata, PSUs, weights)</span>
+design <span class="op">&lt;-</span> <span class="fn">svydesign</span>(
+  id      <span class="op">=</span> <span class="op">~</span>psu_id,
+  strata  <span class="op">=</span> <span class="op">~</span>strata_id,
+  weights <span class="op">=</span> <span class="op">~</span>wt,
+  nest    <span class="op">=</span> <span class="an">TRUE</span>,
+  data    <span class="op">=</span> df
+)
+
+<span class="cm"># Weighted descriptive statistics</span>
+<span class="fn">svymean</span>(<span class="op">~</span>y, design)
+
+<span class="cm"># Adjusted logistic regression (quasi for overdispersion)</span>
+model <span class="op">&lt;-</span> <span class="fn">svyglm</span>(
+  outcome <span class="op">~</span> treat <span class="op">+</span> age <span class="op">+</span> sex <span class="op">+</span> comorbidity,
+  design <span class="op">=</span> design,
+  family <span class="op">=</span> <span class="fn">quasibinomial</span>()
+)
+<span class="fn">summary</span>(model)
+
+<span class="cm"># Marginal effects (more interpretable than ORs)</span>
+marginaleffects::<span class="fn">avg_comparisons</span>(model, variables <span class="op">=</span> <span class="s">"treat"</span>)</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> Most surgical outcomes databases (NSQIP, NIS, NHANES) use complex sampling designs. Analyzing them with naive regression yields incorrect standard errors and biased variance estimates. The <code>quasibinomial</code> family and marginal effects approach are standard for surgical outcomes papers targeting JAMA Surgery or Annals of Surgery.</div>
+
+    <!-- ━━━ 3b. Survey Python ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">clustered_regression.py</span></div>
+      <div class="cd"><span class="kw">import</span> statsmodels.api <span class="kw">as</span> sm
+
+<span class="cm"># Clustered standard errors (patients within hospitals)</span>
+model <span class="op">=</span> sm.<span class="fn">Logit</span>(df[<span class="s">'outcome'</span>],
+                sm.<span class="fn">add_constant</span>(df[[<span class="s">'treat'</span>, <span class="s">'age'</span>, <span class="s">'sex'</span>]]))
+result <span class="op">=</span> model.<span class="fn">fit</span>(cov_type<span class="op">=</span><span class="s">'cluster'</span>,
+                  cov_kwds<span class="op">=</span>{<span class="s">'groups'</span>: df[<span class="s">'hospital_id'</span>]})
+<span class="fn">print</span>(result.<span class="fn">summary</span>())</div>
+    </div>
+
+    <!-- ━━━ 4. MIXED-EFFECTS MODELS ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">mixed_effects_longitudinal.R</span></div>
+      <div class="cd"><span class="cm"># ── Mixed-Effects Models for Longitudinal Data ─────────</span>
+<span class="cm"># Random intercepts account for within-subject correlation</span>
+<span class="cm"># (e.g., repeated GCS measurements post-craniotomy)</span>
+
+<span class="kw">library</span>(<span class="fn">lme4</span>)
+<span class="kw">library</span>(<span class="fn">lmerTest</span>)  <span class="cm"># Satterthwaite p-values</span>
+
+<span class="cm"># Linear mixed model: treatment x time interaction</span>
+model_lmer <span class="op">&lt;-</span> <span class="fn">lmer</span>(
+  y <span class="op">~</span> treat <span class="op">*</span> time <span class="op">+</span> age <span class="op">+</span> sex <span class="op">+</span> (<span class="nu">1</span> <span class="op">|</span> subject_id),
+  data <span class="op">=</span> df_long
+)
+<span class="fn">summary</span>(model_lmer)
+
+<span class="cm"># Generalized LMM for binary outcomes</span>
+model_glmer <span class="op">&lt;-</span> <span class="fn">glmer</span>(
+  outcome <span class="op">~</span> treat <span class="op">+</span> (<span class="nu">1</span> <span class="op">|</span> subject_id),
+  data   <span class="op">=</span> df_long,
+  family <span class="op">=</span> binomial
+)
+<span class="fn">summary</span>(model_glmer)</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> Hierarchical/longitudinal data is ubiquitous in neurosurgical research&mdash;repeated post-operative assessments (GCS, mRS, KPS) nested within patients, patients nested within surgeons or institutions. Mixed-effects models properly handle this non-independence, yielding valid inference where naive regression fails.</div>
+
+    <!-- ━━━ 4b. Mixed Python ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">mixed_effects.py</span></div>
+      <div class="cd"><span class="kw">from</span> statsmodels.regression.mixed_linear_model <span class="kw">import</span> MixedLM
+
+<span class="cm"># Random intercepts by subject</span>
+model <span class="op">=</span> MixedLM(df[<span class="s">'y'</span>], df[[<span class="s">'treat'</span>, <span class="s">'age'</span>, <span class="s">'sex'</span>]],
+               groups<span class="op">=</span>df[<span class="s">'subject_id'</span>])
+result <span class="op">=</span> model.<span class="fn">fit</span>()
+<span class="fn">print</span>(result.<span class="fn">summary</span>())</div>
+    </div>
+
+    <!-- ━━━ 5. E-VALUE SENSITIVITY ANALYSIS ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">evalue_sensitivity.R</span></div>
+      <div class="cd"><span class="cm"># ── E-Value: Sensitivity Analysis for Unmeasured Confounding</span>
+<span class="cm"># "How strong would a hidden confounder need to be to</span>
+<span class="cm">#  explain away the observed effect?" — Reviewers expect this.</span>
+
+<span class="kw">library</span>(<span class="fn">EValue</span>)
+
+<span class="cm"># After logistic regression: OR = 1.5 [1.2, 1.8]</span>
+model <span class="op">&lt;-</span> <span class="fn">glm</span>(outcome <span class="op">~</span> treat <span class="op">+</span> covariates, data <span class="op">=</span> df, family <span class="op">=</span> <span class="fn">binomial</span>())
+
+<span class="cm"># E-value for point estimate and lower CI bound</span>
+<span class="fn">evalue</span>(<span class="nu">1.5</span>, <span class="nu">1.2</span>)  <span class="cm"># OR approximation -&gt; risk ratio</span>
+
+<span class="cm"># Interpretation: E-value of X means an unmeasured</span>
+<span class="cm"># confounder would need RR &ge; X with both treatment</span>
+<span class="cm"># and outcome to fully explain the observed association</span></div>
+    </div>
+    <div class="cn"><strong>Context:</strong> The E-value (VanderWeele &amp; Ding, 2017) quantifies robustness to unmeasured confounding. Major surgical journals (JAMA Surgery, Annals of Surgery) increasingly require it for observational studies. A large E-value relative to known confounders strengthens causal claims from non-randomized data.</div>
+
+    <!-- ━━━ 6. REPRODUCIBLE REPORTING ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">YAML / Quarto</span><span class="fl">analysis_report.qmd</span></div>
+      <div class="cd"><span class="cm"># ── Reproducible Analysis Report (Quarto/R Markdown) ───</span>
+<span class="cm"># Dynamic document combining code, output, and narrative</span>
+<span class="cm"># for fully reproducible supplementary materials</span>
+
+<span class="kw">---</span>
+<span class="vr">title</span>: <span class="s">"Treatment Effect in Observational Surgical Data"</span>
+<span class="vr">author</span>: <span class="s">"Salman Khalid"</span>
+<span class="vr">format</span>:
+  <span class="vr">html</span>:
+    <span class="vr">code-fold</span>: <span class="an">true</span>
+  <span class="vr">pdf</span>:
+    <span class="vr">keep-tex</span>: <span class="an">true</span>
+<span class="vr">execute</span>:
+  <span class="vr">echo</span>: <span class="an">true</span>
+  <span class="vr">warning</span>: <span class="an">false</span>
+<span class="kw">---</span></div>
+    </div>
+    <div class="cn"><strong>Context:</strong> Quarto/R Markdown produces dynamic, version-controlled reports where analysis code and narrative are interwoven. Ensures every figure and p-value is traceable to exact code&mdash;essential for reproducibility standards expected by NIH and top surgical journals.</div>
+
+    <!-- ━━━ 7. MARGINAL STRUCTURAL MODELS ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">marginal_structural_model.R</span></div>
+      <div class="cd"><span class="cm"># ── Marginal Structural Models (MSM) ───────────────────</span>
+<span class="cm"># For time-varying confounding affected by prior treatment</span>
+<span class="cm"># (e.g., medication adherence &rarr; lab values &rarr; dose changes)</span>
+
+<span class="kw">library</span>(<span class="fn">ipw</span>)
+<span class="kw">library</span>(<span class="fn">survey</span>)
+
+<span class="cm"># Stabilized IPTW for time-varying exposure</span>
+wt <span class="op">&lt;-</span> <span class="fn">ipwtm</span>(
+  exposure    <span class="op">=</span> treatment,
+  family      <span class="op">=</span> <span class="s">"binomial"</span>,
+  link        <span class="op">=</span> <span class="s">"logit"</span>,
+  numerator   <span class="op">=</span> <span class="op">~</span> age <span class="op">+</span> sex,
+  denominator <span class="op">=</span> <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> lag_treatment <span class="op">+</span> lag_confounder,
+  id          <span class="op">=</span> subject_id,
+  time        <span class="op">=</span> time,
+  data        <span class="op">=</span> df_long,
+  corstr      <span class="op">=</span> <span class="s">"exchangeable"</span>
+)
+
+<span class="cm"># Weighted outcome model</span>
+design <span class="op">&lt;-</span> <span class="fn">svydesign</span>(ids <span class="op">=</span> <span class="op">~</span>subject_id,
+                    weights <span class="op">=</span> <span class="op">~</span>wt<span class="op">$</span>ipw.weights,
+                    data <span class="op">=</span> df_long)
+msm <span class="op">&lt;-</span> <span class="fn">svyglm</span>(outcome <span class="op">~</span> treatment <span class="op">+</span> time,
+              design <span class="op">=</span> design, family <span class="op">=</span> <span class="fn">quasibinomial</span>())</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> MSMs handle time-varying confounding where standard regression fails (confounders on the causal pathway that are also affected by prior treatment). Highly valued in pharmacoepidemiology and surgical critical care research. This is an advanced technique that demonstrates understanding of causal inference beyond standard observational methods.</div>
+
+    <!-- ━━━ 8. SQL: NSQIP SURGICAL OUTCOMES ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">SQL / DuckDB</span><span class="fl">nsqip_craniotomy_outcomes.sql</span></div>
+      <div class="cd"><span class="cm">-- Neurosurgical outcomes from NSQIP-like registry</span>
+<span class="cm">-- 30-day complication rates stratified by approach &amp; volume</span>
+
+<span class="kw">WITH</span> surgeon_volume <span class="kw">AS</span> (
+    <span class="kw">SELECT</span> surgeon_id,
+           <span class="fn">COUNT</span>(*) <span class="kw">AS</span> annual_cases,
+           <span class="kw">CASE</span> <span class="kw">WHEN</span> <span class="fn">COUNT</span>(*) &gt;= <span class="nu">50</span> <span class="kw">THEN</span> <span class="s">'High-Volume'</span>
+                <span class="kw">WHEN</span> <span class="fn">COUNT</span>(*) &gt;= <span class="nu">20</span> <span class="kw">THEN</span> <span class="s">'Medium-Volume'</span>
+                <span class="kw">ELSE</span> <span class="s">'Low-Volume'</span> <span class="kw">END</span> <span class="kw">AS</span> volume_tier
+    <span class="kw">FROM</span> procedures
+    <span class="kw">WHERE</span> cpt_code <span class="kw">IN</span> (<span class="s">'61510'</span>, <span class="s">'61512'</span>, <span class="s">'61518'</span>)  <span class="cm">-- craniotomy CPTs</span>
+      <span class="kw">AND</span> op_year <span class="op">=</span> <span class="nu">2024</span>
+    <span class="kw">GROUP BY</span> <span class="nu">1</span>
+),
+outcomes <span class="kw">AS</span> (
+    <span class="kw">SELECT</span> p.*,
+           sv.volume_tier,
+           <span class="kw">CASE</span> <span class="kw">WHEN</span> p.days_to_complication &lt;= <span class="nu">30</span> <span class="kw">THEN</span> <span class="nu">1</span> <span class="kw">ELSE</span> <span class="nu">0</span> <span class="kw">END</span> <span class="kw">AS</span> comp_30d
+    <span class="kw">FROM</span> procedures p
+    <span class="kw">JOIN</span> surgeon_volume sv <span class="kw">USING</span> (surgeon_id)
+)
+<span class="kw">SELECT</span>
+    volume_tier,
+    approach,
+    <span class="fn">COUNT</span>(*) <span class="kw">AS</span> n_cases,
+    <span class="fn">ROUND</span>(<span class="fn">AVG</span>(comp_30d) * <span class="nu">100</span>, <span class="nu">1</span>) <span class="kw">AS</span> complication_pct,
+    <span class="fn">ROUND</span>(<span class="fn">AVG</span>(los_days), <span class="nu">1</span>) <span class="kw">AS</span> mean_los,
+    <span class="fn">ROUND</span>(<span class="fn">PERCENTILE_CONT</span>(<span class="nu">0.5</span>) <span class="kw">WITHIN GROUP</span> (<span class="kw">ORDER BY</span> los_days), <span class="nu">1</span>) <span class="kw">AS</span> median_los
+<span class="kw">FROM</span> outcomes
+<span class="kw">GROUP BY</span> <span class="nu">1</span>, <span class="nu">2</span>
+<span class="kw">ORDER BY</span> volume_tier, complication_pct;</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> Volume-outcome analysis is a major theme in neurosurgical health services research. This query stratifies craniotomy outcomes by surgeon case volume and surgical approach&mdash;the kind of analysis published in Journal of Neurosurgery and Neurosurgery.</div>
+
+    <!-- ━━━ 9. ML: RANDOM FOREST SURGICAL RISK ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">surgical_risk_prediction.py</span></div>
+      <div class="cd"><span class="cm"># ── ML: Surgical Complication Risk Prediction ──────────</span>
+<span class="cm"># Random Forest with nested cross-validation &amp; SHAP</span>
+
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy <span class="kw">as</span> np
+<span class="kw">from</span> sklearn.ensemble <span class="kw">import</span> RandomForestClassifier
+<span class="kw">from</span> sklearn.model_selection <span class="kw">import</span> (
+    StratifiedKFold, cross_val_predict, GridSearchCV
+)
+<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> roc_auc_score, classification_report
+<span class="kw">import</span> shap
+
+features <span class="op">=</span> [<span class="s">'age'</span>, <span class="s">'bmi'</span>, <span class="s">'asa_score'</span>, <span class="s">'tumor_volume_cc'</span>,
+            <span class="s">'prior_craniotomy'</span>, <span class="s">'preop_kps'</span>, <span class="s">'diabetes'</span>,
+            <span class="s">'midline_shift_mm'</span>, <span class="s">'op_duration_min'</span>]
+
+X <span class="op">=</span> df[features]
+y <span class="op">=</span> df[<span class="s">'major_complication'</span>]
+
+<span class="cm"># Nested CV to avoid optimistic bias</span>
+outer_cv <span class="op">=</span> StratifiedKFold(n_splits<span class="op">=</span><span class="nu">5</span>, shuffle<span class="op">=</span><span class="an">True</span>, random_state<span class="op">=</span><span class="nu">42</span>)
+inner_cv <span class="op">=</span> StratifiedKFold(n_splits<span class="op">=</span><span class="nu">3</span>, shuffle<span class="op">=</span><span class="an">True</span>, random_state<span class="op">=</span><span class="nu">42</span>)
+
+param_grid <span class="op">=</span> {
+    <span class="s">'n_estimators'</span>: [<span class="nu">200</span>, <span class="nu">500</span>],
+    <span class="s">'max_depth'</span>: [<span class="nu">5</span>, <span class="nu">10</span>, <span class="an">None</span>],
+    <span class="s">'min_samples_leaf'</span>: [<span class="nu">10</span>, <span class="nu">20</span>]
+}
+
+rf <span class="op">=</span> GridSearchCV(
+    RandomForestClassifier(class_weight<span class="op">=</span><span class="s">'balanced'</span>, random_state<span class="op">=</span><span class="nu">42</span>),
+    param_grid, cv<span class="op">=</span>inner_cv, scoring<span class="op">=</span><span class="s">'roc_auc'</span>, n_jobs<span class="op">=</span><span class="nu">-1</span>
+)
+
+<span class="cm"># Out-of-fold predictions for unbiased AUC</span>
+y_pred <span class="op">=</span> <span class="fn">cross_val_predict</span>(rf, X, y, cv<span class="op">=</span>outer_cv, method<span class="op">=</span><span class="s">'predict_proba'</span>)[:, <span class="nu">1</span>]
+<span class="fn">print</span>(<span class="s">f"AUC (nested CV): {roc_auc_score(y, y_pred):.3f}"</span>)
+
+<span class="cm"># SHAP for interpretable feature importance</span>
+rf.<span class="fn">fit</span>(X, y)
+explainer <span class="op">=</span> shap.<span class="fn">TreeExplainer</span>(rf.best_estimator_)
+shap_vals <span class="op">=</span> explainer.<span class="fn">shap_values</span>(X)
+shap.<span class="fn">summary_plot</span>(shap_vals[<span class="nu">1</span>], X, show<span class="op">=</span><span class="an">False</span>)</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> ML-based surgical risk prediction is a rapidly growing field in neurosurgery. Nested cross-validation prevents optimistic AUC inflation (a common methodological flaw in surgical ML papers). SHAP values provide interpretable feature importance&mdash;essential for clinical adoption. Features like KPS, midline shift, and tumor volume are standard neurosurgical predictors.</div>
+
+    <!-- ━━━ 10. NLP: CLINICAL NOTE EXTRACTION ━━━ -->
+    <div class="cb">
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">clinical_nlp_extraction.py</span></div>
+      <div class="cd"><span class="cm"># ── NLP: Extracting Structured Data from Op Notes ──────</span>
+<span class="cm"># Regex + spaCy pipeline for neurosurgical operative notes</span>
+
+<span class="kw">import</span> re
+<span class="kw">import</span> spacy
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">from</span> typing <span class="kw">import</span> Optional
+
+nlp <span class="op">=</span> spacy.<span class="fn">load</span>(<span class="s">"en_core_sci_lg"</span>)  <span class="cm"># biomedical NER model</span>
+
+<span class="kw">def</span> <span class="fn">extract_tumor_details</span>(op_note: <span class="vr">str</span>) -&gt; <span class="vr">dict</span>:
+    <span class="s">"""Extract structured fields from free-text op notes."""</span>
+    doc <span class="op">=</span> <span class="fn">nlp</span>(op_note)
+    result <span class="op">=</span> {}
+
+    <span class="cm"># Tumor size (cm or mm)</span>
+    size_pat <span class="op">=</span> re.<span class="fn">compile</span>(
+        <span class="s">r'(\d+\.?\d*)\s*(?:x\s*\d+\.?\d*\s*)?(?:cm|mm)\s*(?:tumor|mass|lesion)'</span>,
+        re.IGNORECASE
+    )
+    m <span class="op">=</span> size_pat.<span class="fn">search</span>(op_note)
+    result[<span class="s">'tumor_size_cm'</span>] <span class="op">=</span> <span class="fn">float</span>(m.<span class="fn">group</span>(<span class="nu">1</span>)) <span class="kw">if</span> m <span class="kw">else</span> <span class="an">None</span>
+
+    <span class="cm"># Extent of resection</span>
+    eor_terms <span class="op">=</span> {
+        <span class="s">'gross total'</span>: <span class="s">'GTR'</span>,
+        <span class="s">'subtotal'</span>: <span class="s">'STR'</span>,
+        <span class="s">'near-total'</span>: <span class="s">'NTR'</span>,
+        <span class="s">'biopsy'</span>: <span class="s">'Biopsy'</span>
+    }
+    note_lower <span class="op">=</span> op_note.<span class="fn">lower</span>()
+    result[<span class="s">'extent_of_resection'</span>] <span class="op">=</span> <span class="fn">next</span>(
+        (v <span class="kw">for</span> k, v <span class="kw">in</span> eor_terms.<span class="fn">items</span>() <span class="kw">if</span> k <span class="kw">in</span> note_lower),
+        <span class="s">'Unknown'</span>
+    )
+
+    <span class="cm"># Named entities (anatomical locations, pathology)</span>
+    result[<span class="s">'entities'</span>] <span class="op">=</span> [
+        {<span class="s">'text'</span>: ent.text, <span class="s">'label'</span>: ent.label_}
+        <span class="kw">for</span> ent <span class="kw">in</span> doc.ents
+        <span class="kw">if</span> ent.label_ <span class="kw">in</span> (<span class="s">'DISEASE'</span>, <span class="s">'ANATOMY'</span>, <span class="s">'PROCEDURE'</span>)
+    ]
+
+    <span class="kw">return</span> result</div>
+    </div>
+    <div class="cn"><strong>Context:</strong> Unstructured operative notes contain rich data locked in free text. This pipeline extracts tumor dimensions, extent of resection (GTR/STR), and anatomical entities using regex patterns and a biomedical NER model&mdash;converting narrative text into structured variables suitable for outcomes analysis. Increasingly important as neurosurgical databases grow beyond what manual abstraction can handle.</div>
+  </div>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <div class="tp" id="pubs">
+    <h3 class="st">Publications</h3>
+
+    <div class="pe">
+      <div class="jn">Cureus &middot; Published 2024</div>
+      <h4>Efficacy of Esketamine in Postpartum Depression: A Systematic Review and Meta-Analysis of Randomized Controlled Trials</h4>
+      <div class="au"><strong>Khalid S</strong>, et al.</div>
+      <div class="doi">DOI: <a href="https://doi.org/10.7759/cureus.73001" target="_blank">10.7759/cureus.73001</a></div>
+    </div>
+
+    <div class="pe">
+      <div class="jn">J Clinical Gastroenterology &amp; Hepatology &middot; Accepted 2025</div>
+      <h4>Tegoprazan vs. Conventional PPIs for Acid-Related Disorders: A Systematic Review and Meta-Analysis</h4>
+      <div class="au"><strong>Khalid S</strong>, et al.</div>
+      <div class="doi">Accepted for publication</div>
+    </div>
+
+    <div class="pe">
+      <div class="jn">Under Peer Review &middot; 2025</div>
+      <h4>Lifitegrast for Dry Eye Disease: A Systematic Review and Meta-Analysis</h4>
+      <div class="au"><strong>Khalid S</strong>, et al.</div>
+      <div class="doi">Manuscript under review</div>
+    </div>
+  </div>
+
+  <!-- ===== PIPELINE ===== -->
+  <div class="tp" id="pipeline">
+    <h3 class="st">Pharmacovigilance Pipeline &mdash; Technical Details</h3>
+    <p class="si">A modular pharmacovigilance system I have been building since 2024, designed to make post-market drug safety surveillance more systematic and reproducible.</p>
+
+    <div class="pb">
+      <h4>Architecture</h4>
+      <p>18 Python modules organized into ingestion, standardization, signal detection, and reporting layers. Raw adverse event data from FAERS, EudraVigilance, VigiBase, and PMDA is loaded into a DuckDB analytical warehouse using Parquet columnar storage for fast aggregation queries.</p>
+      <div class="ps">
+        <div class="v"><div class="n">18</div><div class="l">Modules</div></div>
+        <div class="v"><div class="n">4</div><div class="l">Data Sources</div></div>
+        <div class="v"><div class="n">DuckDB</div><div class="l">Warehouse</div></div>
+        <div class="v"><div class="n">Parquet</div><div class="l">Storage</div></div>
+      </div>
+    </div>
+
+    <div class="pb">
+      <h4>Signal Detection</h4>
+      <p>Computes Proportional Reporting Ratio (PRR), Reporting Odds Ratio (ROR), and Empirical Bayesian Geometric Mean (EBGM). Signals are flagged when multiple measures exceed thresholds simultaneously, following WHO-UMC standards. Temporal analysis tracks quarter-over-quarter signal evolution to distinguish emerging from established signals.</p>
+    </div>
+
+    <div class="pb">
+      <h4>Reproducibility &amp; Reporting</h4>
+      <p>Each run generates a timestamped PDF report via Jinja2 templates with signal summary tables, time-series plots, and drug-event heatmaps. Every analysis is version-stamped with a hash of input data and code state for full traceability. Containerizable with Docker for deployment in regulated environments.</p>
+    </div>
+  </div>
+
+  <!-- ===== APPLICATIONS ===== -->
+  <div class="tp" id="apps">
+    <h3 class="st">Interactive Research Applications</h3>
+    <p class="si">Full-stack analytical applications built in R Shiny, demonstrating the ability to translate complex statistical methods into accessible, production-ready tools for clinical researchers.</p>
+
+    <!-- ─── Super-Meta-X ─── -->
+    <div class="app-hero">
+      <h4>Super-Meta-X &mdash; All-in-One Meta-Analysis Platform</h4>
+      <div class="app-sub">R Shiny &middot; 3,000+ Lines &middot; 50+ Packages &middot; 14+ Modules</div>
+      <p>A comprehensive, standalone Shiny application providing an end-to-end platform for conducting systematic reviews and meta-analyses&mdash;from AI-powered data extraction to publication-ready reporting. Integrates advanced statistical methods, interactive visualizations, and automated report generation into a single interface.</p>
+
+      <div class="app-scale">
+        <div class="s-item"><div class="s-val">3,000+</div><div class="s-lbl">Lines of Code</div></div>
+        <div class="s-item"><div class="s-val">50+</div><div class="s-lbl">R Packages</div></div>
+        <div class="s-item"><div class="s-val">2</div><div class="s-lbl">AI APIs</div></div>
+        <div class="s-item"><div class="s-val">14+</div><div class="s-lbl">Analysis Tabs</div></div>
+      </div>
+
+      <div class="app-section">
+        <h5>AI-Powered Data Extraction</h5>
+        <ul>
+          <li>Engineered a novel feature using <strong>Google Gemini API</strong> to automatically extract structured metadata from uploaded PDF articles, streamlining initial study screening</li>
+          <li>Built a second AI tool that parses raw text from research papers to extract <strong>arm-level quantitative data</strong> (means, SDs, N), dramatically reducing manual data entry effort and error</li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Full-Cycle Data Management</h5>
+        <ul>
+          <li>Robust data pipeline supporting <strong>CSV, Excel, SPSS, SAS, RevMan .rm5</strong> files and multiple data types (binary, continuous, pre-calculated effect sizes, correlations, proportions)</li>
+          <li>Flexible pivot table tool for in-app data reshaping and interactive <strong>rhandsontable</strong> for manual data entry and validation</li>
+          <li>Integrated <strong>mice</strong> package for missing data imputation within the analytical workflow</li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Comprehensive Analytical Engine</h5>
+        <ul>
+          <li><strong>Effect sizes:</strong> Binary (OR, RR, RD), continuous (SMD, MD), correlational, and proportional outcomes</li>
+          <li><strong>Core models:</strong> Fixed-effect and random-effects with multiple &tau;&sup2; estimators (REML, DL, PM, ML) and Knapp-Hartung adjustments</li>
+          <li><strong>Advanced analytics:</strong> Subgroup analysis, meta-regression, publication bias (Egger&rsquo;s, Trim-and-Fill, DOI plot, LFK index, Fail-safe N), sensitivity analysis (leave-one-out, influence diagnostics, GOSH), diagnostic test accuracy (SROC), network meta-analysis</li>
+          <li><strong>Specialized methods:</strong> Robust Variance Estimation (RVE), Bayesian meta-analysis (RoBMA), NNT calculation</li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Architecture &amp; Performance</h5>
+        <ul>
+          <li>Modular single-script design with clear separation: global setup, UI (<strong>bslib</strong> + <strong>navbarPage</strong>), and reactive server logic</li>
+          <li>Asynchronous processing via <strong>future</strong> and <strong>promises</strong> for long-running tasks (AI calls, GOSH plots), ensuring non-blocking UI</li>
+          <li>Session management with auto-save, allowing users to preserve entire analysis state for later retrieval</li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Reporting &amp; Visualization</h5>
+        <ul>
+          <li>Publication-quality interactive figures via <strong>ggplot2</strong>, <strong>plotly</strong>, and <strong>meta</strong>: forest plots, funnel plots, bubble plots, drapery plots</li>
+          <li>Automated Risk of Bias assessment using <strong>robvis</strong> (RoB2 and ROBINS-I) with in-app assessment tool</li>
+          <li>Multi-format report generation (PDF, HTML, Word) via <strong>rmarkdown</strong>, compiling all analytical outputs into a manuscript skeleton</li>
+        </ul>
+      </div>
+
+      <div class="app-stack">
+        <span class="tg">R Shiny</span><span class="tg">bslib</span><span class="tg">metafor</span><span class="tg">netmeta</span><span class="tg">meta</span><span class="tg g">Gemini API</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg">robvis</span><span class="tg">rmarkdown</span><span class="tg t">future</span><span class="tg t">promises</span><span class="tg v">mice</span><span class="tg v">RoBMA</span>
+      </div>
+    </div>
+
+    <hr class="app-divider">
+
+    <!-- ─── Clinical Trial Retrospective Analysis ─── -->
+    <div class="app-hero">
+      <h4>Clinical Trial Retrospective Analysis App</h4>
+      <div class="app-sub">R Shiny &middot; Neurosurgery Focus &middot; Multi-Study-Design Support</div>
+      <p>An interactive application for retrospective analysis of clinical trial datasets, supporting case-control, survival, and cohort study designs. Provides a complete workflow from data upload through advanced statistical modeling to downloadable reports.</p>
+
+      <div class="app-section">
+        <h5>Data Import &amp; Management</h5>
+        <ul>
+          <li>Flexible data loader supporting <strong>CSV, Excel (.xlsx), SPSS (.sav)</strong> formats with auto-detection of dataset type based on column names</li>
+          <li>Built-in sample data (neurosurgery case-control) for immediate exploration and demonstration</li>
+          <li>Dynamic UI that auto-updates variable selection (outcome, exposure, covariates, stratification) based on loaded dataset</li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Descriptive &amp; Exploratory Analytics</h5>
+        <ul>
+          <li>Summary statistics tables via <strong>gtsummary</strong> and <strong>gt</strong> with continuous variable options (mean, SD)</li>
+          <li>Distribution plots (histograms/bar charts) and correlation matrices using <strong>corrplot</strong></li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Statistical Modeling</h5>
+        <ul>
+          <li><strong>Univariate analysis:</strong> Linear regression (continuous), logistic regression (binary), correlation, ANOVA, chi-square with effect plots</li>
+          <li><strong>Multivariable models:</strong> User-specified adjustment covariates, model diagnostics (residual plots, deviance residuals), adjusted predictions with confidence intervals</li>
+          <li><strong>Survival analysis:</strong> Automated Kaplan-Meier curves with risk tables and p-values via <strong>survminer</strong>, Cox proportional hazards regression</li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Visualization &amp; Reporting</h5>
+        <ul>
+          <li>Flexible custom plots (scatter, box, bar, histogram, density) with color and facet variables, rendered interactively via <strong>plotly</strong></li>
+          <li>Dynamic hover tooltips, zoom, and pan for enhanced data exploration</li>
+          <li>Automated text-based analysis reports summarizing dataset characteristics, regression outputs, and survival results with download functionality</li>
+        </ul>
+      </div>
+
+      <div class="app-section">
+        <h5>Robustness &amp; Design</h5>
+        <ul>
+          <li><strong>tryCatch</strong> blocks for graceful error handling; <strong>showNotification</strong> for real-time user feedback</li>
+          <li>Clean separation of UI and server logic with reactive values; <strong>renderUI</strong> for dynamic variable selectors</li>
+          <li>Reset functionality to clear all data and results, restoring app state</li>
+        </ul>
+      </div>
+
+      <div class="app-stack">
+        <span class="tg">R Shiny</span><span class="tg">shinythemes</span><span class="tg">survival</span><span class="tg">survminer</span><span class="tg g">gtsummary</span><span class="tg g">gt</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg">corrplot</span><span class="tg t">DT</span><span class="tg v">broom</span><span class="tg v">haven</span><span class="tg v">readxl</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end tab-container -->
+
+<!-- CONTACT -->
+<section class="ct">
+  <h3>Contact</h3>
+  <p><a href="mailto:salmankhalid@kemu.edu.pk">salmankhalid@kemu.edu.pk</a></p>
+  <p>+92 309 659 0615</p>
+  <p style="margin-top:.35rem;font-size:.7rem">King Edward Medical University, Lahore &middot; ORCID: <a href="https://orcid.org/0009-0009-4871-7958">0009-0009-4871-7958</a></p>
+</section>
+
+<footer class="ft">Salman Khalid, MBBS &middot; Research Portfolio &middot; 2025&ndash;2026</footer>
+
+<!-- JS -->
+<script>
+document.querySelectorAll('.tb').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.tb').forEach(x=>x.classList.remove('a'));
+    document.querySelectorAll('.tp').forEach(x=>x.classList.remove('a'));
+    b.classList.add('a');
+    document.getElementById(b.dataset.t).classList.add('a');
+  });
+});
+const ac=()=>{document.querySelectorAll('.mt .n').forEach(el=>{const t=el.textContent;const m=t.match(/^([\d,]+)/);if(!m)return;const tgt=parseInt(m[1].replace(/,/g,''));const sfx=t.replace(m[1],'');const dur=1100;const st=performance.now();const tk=now=>{const p=Math.min((now-st)/dur,1);const e=1-Math.pow(1-p,3);el.textContent=Math.floor(tgt*e).toLocaleString()+sfx;if(p<1)requestAnimationFrame(tk)};requestAnimationFrame(tk)})};
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){ac();obs.unobserve(en.target)}})},{threshold:.3});
+const me=document.querySelector('.metrics');if(me)obs.observe(me);
+</script>
+</body>
+</html>
