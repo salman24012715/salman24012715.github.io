@@ -1,6 +1,6 @@
 # Salman Khalid — Research & Data Science Portfolio
 
-Live at: **https://salman2715.github.io**
+Live at: **[https://salman2715.github.io](https://salman24012715.github.io/)**
 
 Physician-researcher (KEMU '24) with expertise in clinical data science, meta-analysis, pharmacovigilance, and surgical outcomes research. Seeking J-1 visa–sponsored research positions in academic neurosurgery.
 
