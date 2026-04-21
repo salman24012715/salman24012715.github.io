@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salman Khalid, MBBS | Research &amp; Data Science Portfolio</title>
+<title>Salman Khalid, MBBS | Neurosurgery Research Portfolio</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -107,6 +107,24 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-he
 .pe .au strong{color:var(--gold);font-weight:600}
 .pe .doi{font-size:.66rem;color:var(--text-dim);margin-top:.18rem}
 .pe .doi a{color:var(--lavender);text-decoration:none}.pe .doi a:hover{text-decoration:underline}
+.pe ul{margin-top:.45rem;padding-left:0;list-style:none}
+.pe ul li{font-size:.74rem;color:var(--text-dim);line-height:1.65;padding:.12rem 0 .12rem 1rem;position:relative}
+.pe ul li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-size:.6rem}
+.pe ul li strong{color:var(--text);font-weight:500}
+
+/* === CLINICAL === */
+.cx{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1.1rem;margin-bottom:.9rem;position:relative;overflow:hidden}
+.cx:hover{border-color:var(--accent)}
+.cx::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
+.cx.primary::before{background:var(--accent)}
+.cx.secondary::before{background:var(--teal)}
+.cx.tertiary::before{background:var(--steel)}
+.cx h4{font-size:.92rem;color:var(--heading);margin-bottom:.1rem;font-weight:600}
+.cx .cx-meta{font-size:.6rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.55rem;font-weight:500}
+.cx ul{list-style:none;padding:0}
+.cx ul li{font-size:.74rem;color:var(--text-dim);line-height:1.65;padding:.15rem 0 .15rem 1rem;position:relative}
+.cx ul li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-size:.6rem}
+.cx ul li strong{color:var(--text);font-weight:500}
 
 /* === PIPELINE === */
 .pb{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1.1rem;margin-bottom:.9rem}
@@ -154,10 +172,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-he
 <header class="hd">
   <div>
     <div class="hd-name">SALMAN KHALID<span class="deg">MBBS</span></div>
-    <div class="hd-tag">Physician-Researcher &middot; Data Scientist &middot; Aspiring Surgeon</div>
+    <div class="hd-tag">Aspiring Neurosurgeon &middot; Surgeon-Scientist &middot; Cerebrovascular &amp; Neuroendovascular Research</div>
   </div>
   <nav class="hd-links">
-    <a href="mailto:salmankhalid@kemu.edu.pk">Email</a>
+    <a href="mailto:salman.khalid@kemu.edu.pk">Email</a>
     <a href="https://orcid.org/0009-0006-3471-2710">ORCID</a>
     <a href="https://github.com/salman24012715">GitHub</a>
   </nav>
@@ -165,10 +183,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-he
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-label">Research Portfolio 2025&ndash;2026</div>
-  <h1>Surgical Research &amp; <strong>Computational Medicine</strong></h1>
-  <p class="sub">King Edward Medical University &rsquo;24 &middot; USMLE Step 1 &middot; J-1 Visa Eligible</p>
-  <p class="desc">I apply quantitative methods and data engineering to clinical research questions&mdash;from pharmacovigilance signal detection across global safety databases to systematic evidence synthesis in surgical subspecialties. Seeking a research position where I can contribute computational skills to an investigator&rsquo;s program while training toward a career in academic surgery.</p>
+  <div class="hero-label">Neurosurgery Research Portfolio &middot; 2025&ndash;2026</div>
+  <h1>Neurosurgery Research &amp; <strong>Computational Medicine</strong></h1>
+  <p class="sub">King Edward Medical University &rsquo;24 &middot; USMLE Step 1 PASS &middot; J-1 Visa Eligible &middot; Available May 2026</p>
+  <p class="desc">Aspiring neurosurgeon combining hands-on operative experience (30+ neurosurgical cases: spinal fusions, vascular procedures, microdiscectomies, aneurysm clipping) and Neuro-ICU perioperative support with advanced computational skills in R, Python, and SPSS. Two published meta-analyses synthesizing evidence across 8,700+ subjects. Seeking a data-driven neurosurgery research associate position in cerebrovascular, neuroendovascular, or surgical outcomes labs, contributing computational and registry expertise toward a career as a surgeon-scientist.</p>
 </section>
 
 <!-- METRICS -->
@@ -176,402 +194,258 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-he
   <div class="mt"><div class="n">8,700+</div><div class="l">Subjects Analyzed</div></div>
   <div class="mt"><div class="n">35</div><div class="l">RCTs Reviewed</div></div>
   <div class="mt"><div class="n">3</div><div class="l">Publications</div></div>
-  <div class="mt"><div class="n">18</div><div class="l">Pipeline Modules</div></div>
-  <div class="mt"><div class="n">4</div><div class="l">PV Databases</div></div>
-  <div class="mt"><div class="n">50+</div><div class="l">Visualizations</div></div>
+  <div class="mt"><div class="n">30+</div><div class="l">Neuro-OR Cases</div></div>
+  <div class="mt"><div class="n">15+</div><div class="l">Microscopic Cases</div></div>
+  <div class="mt"><div class="n">3</div><div class="l">R Shiny Apps</div></div>
 </div>
 
 <!-- TABS -->
 <div class="tc">
   <nav class="tn" role="tablist">
     <button class="tb a" data-t="about">About</button>
-    <button class="tb" data-t="skills">Technical Skills</button>
-    <button class="tb" data-t="projects">Projects</button>
+    <button class="tb" data-t="skills">Data Science Skills</button>
+    <button class="tb" data-t="projects">Research Projects</button>
     <button class="tb" data-t="code">Code Samples</button>
+    <button class="tb" data-t="clinical">Clinical Experience</button>
     <button class="tb" data-t="pubs">Publications</button>
-    <button class="tb" data-t="pipeline">PV Pipeline</button>
     <button class="tb" data-t="apps">Applications</button>
   </nav>
 
   <!-- ===== ABOUT ===== -->
   <div class="tp a" id="about">
     <h3 class="st">Background</h3>
-    <p class="si">I graduated from King Edward Medical University (KEMU) in 2024&mdash;one of the most competitive medical programs in South Asia with a &lt;2% acceptance rate. During clinical training at Mayo Hospital (one of the largest tertiary centers in the region) and through self-directed study afterward, I developed a focused interest in applying computational methods to surgical and clinical research problems.</p>
-    <p class="si">My long-term goal is academic surgery&mdash;combining surgical training with data-driven research to improve patient outcomes. In the near term, I am seeking a J-1 visa&ndash;sponsored research position where I can contribute meaningfully to an investigator&rsquo;s program while building the research foundation for a competitive residency application.</p>
+    <p class="si">I graduated from King Edward Medical University (KEMU) in 2024&mdash;one of the most competitive medical programs in South Asia. During clinical training at Mayo Hospital (one of the largest tertiary academic centers in the region), I developed a focused interest in neurosurgery and neuroendovascular procedures, assisting in 30+ neurosurgical cases including spinal fusions, vascular procedures, microdiscectomies, and aneurysm clipping, while contributing to Neuro-ICU perioperative monitoring (ICP, CT perfusion, CTA, MRA). I also have direct experience with intraoperative data collection for neurosurgical cases, rounds-based clinical documentation, and patient enrollment readiness for prospective registry workflows.</p>
+    <p class="si">My long-term goal is academic neurosurgery&mdash;combining surgical training with computational research to improve outcomes in cerebrovascular disease, neuroendovascular intervention, and spinal surgery. I apply quantitative methods across the full stack: from systematic evidence synthesis (meta-analysis, Cochrane RoB 2) to observational causal inference (PSM, IPTW), ML-based surgical risk prediction, and NLP extraction of structured data from operative notes. In the near term, I am seeking a J-1 visa&ndash;sponsored research associate position in a neurosurgery outcomes or registry lab, where I can drive data-intensive projects while building the research foundation for a competitive US residency application.</p>
 
-    <h3 class="st" style="margin-top:1.6rem">What I Bring to a Research Team</h3>
+    <h3 class="st" style="margin-top:1.6rem">What I Bring to a Neurosurgery Research Team</h3>
     <div class="sg">
       <div class="sc">
-        <h4>Quantitative Analysis</h4>
-        <p>Hands-on experience with meta-analytic models, survival analysis, mixed-effects regression, and propensity score methods&mdash;applied to real published studies, not just coursework.</p>
+        <h4>Large-Scale Data Synthesis</h4>
+        <p>Two published meta-analyses synthesizing 8,700+ subjects across 35 RCTs using random-effects models, REML estimation, I&sup2; heterogeneity, meta-regression, and GRADE evidence quality. Directly scalable to neurosurgery systematic reviews on cerebrovascular interventions, spinal outcomes, and neuroendovascular devices.</p>
+        <span class="tg g">metafor</span><span class="tg g">meta</span><span class="tg g">RevMan</span><span class="tg g">SPSS</span>
       </div>
       <div class="sc">
-        <h4>Data Engineering</h4>
-        <p>Can build ETL pipelines, wrangle messy clinical data, and deliver clean analytical datasets. Comfortable with SQL, Python/pandas, DuckDB, and Parquet at scale.</p>
+        <h4>Neuro-ICU &amp; Perioperative Data Collection</h4>
+        <p>Supported ICP monitoring and interpretation of CT perfusion, CTA, and MRA findings for perioperative neurosurgical decision-making. Documented rounds findings and presented clinical summaries to support patient enrollment and longitudinal follow-up&mdash;directly applicable to cerebrovascular outcomes registries and prospective neuroendovascular trial support.</p>
+        <span class="tg t">Neuro-ICU</span><span class="tg t">CT Perfusion</span><span class="tg t">CTA/MRA</span>
       </div>
       <div class="sc">
-        <h4>Clinical Judgment</h4>
-        <p>MBBS training means I understand endpoints, study design, IRB requirements, and can communicate findings to both clinical and technical audiences.</p>
+        <h4>Causal Inference &amp; Observational Methods</h4>
+        <p>Proficient in propensity score matching (PSM) and IPTW for confounding adjustment in non-randomized neurosurgical cohorts. E-value sensitivity analysis, Love plots for covariate balance, and marginal effects&mdash;the standard methods for cerebrovascular outcomes studies targeting JNNP, Neurosurgery, and Journal of Neurosurgery.</p>
+        <span class="tg g">MatchIt</span><span class="tg g">WeightIt</span><span class="tg">survey</span>
       </div>
       <div class="sc">
-        <h4>Writing &amp; Communication</h4>
-        <p>Three peer-reviewed publications as first author. Familiar with manuscript preparation, journal correspondence, and structured scientific writing.</p>
+        <h4>Operative Experience &amp; Clinical Judgment</h4>
+        <p>Assisted in 30+ neurosurgical cases (spinal fusions, aneurysm clipping, microdiscectomies, vascular procedures); maintained sterile technique and managed micro-instrument exchanges during 15+ microscopic cases. MBBS training ensures fluency with neurosurgical endpoints, neuroimaging interpretation, study design, and IRB requirements.</p>
+        <span class="tg t">Microsurgery Assist</span><span class="tg t">Sterile Technique</span><span class="tg t">BLS Certified</span>
+      </div>
+      <div class="sc">
+        <h4>Advanced Statistical Modeling</h4>
+        <p>Survival analysis (Kaplan-Meier, Cox PH, competing risks), mixed-effects models for longitudinal neurosurgical outcomes (GCS, mRS, KPS trajectories), complex survey regression for ACS-NSQIP and NIS-based databases, and ML risk prediction with nested cross-validation and SHAP feature interpretability.</p>
+        <span class="tg">R</span><span class="tg">Python</span><span class="tg">SPSS</span>
+      </div>
+      <div class="sc">
+        <h4>Writing &amp; Scientific Communication</h4>
+        <p>Three peer-reviewed publications as first author (Asian Journal of Psychiatry 2024; European Journal of Gastroenterology &amp; Hepatology 2025; one in preparation). Experienced with PRISMA protocol, manuscript preparation, journal submission systems, and structured scientific writing in LaTeX.</p>
+        <span class="tg t">LaTeX</span><span class="tg t">PRISMA</span><span class="tg t">Cochrane RoB 2</span>
       </div>
     </div>
   </div>
 
-  <!-- ===== SKILLS ===== -->
+  <!-- ===== DATA SCIENCE SKILLS ===== -->
   <div class="tp" id="skills">
-    <h3 class="st">Data Science &amp; Analytics</h3>
+    <h3 class="st">Data Science &amp; Advanced Analytics</h3>
+    <p class="si">The computational toolkit I bring to a neurosurgery research lab&mdash;directly applicable to cerebrovascular outcomes research, neuroendovascular registry analysis, surgical trial evidence synthesis, and ML-based neurosurgical risk prediction.</p>
     <div class="sg">
-      <div class="sc"><h4>Statistical Modeling &amp; Regression</h4><p>Linear, logistic, ordinal, and multinomial regression. Cox proportional hazards and accelerated failure time models for time-to-event data. Propensity score matching (PSM) and inverse probability of treatment weighting (IPTW) for causal inference from observational cohorts. Bayesian regression via Stan/brms.</p><span class="tg">R</span><span class="tg">Python</span><span class="tg">statsmodels</span><span class="tg">SPSS</span></div>
-      <div class="sc"><h4>Meta-Analysis &amp; Evidence Synthesis</h4><p>Pairwise random/fixed-effects models (REML, DerSimonian-Laird, Paule-Mandel). Network meta-analysis with SUCRA rankings. I&sup2; heterogeneity quantification, meta-regression for moderator analysis, prediction intervals, and GRADE evidence-quality grading. Publication bias detection via Egger&rsquo;s test, trim-and-fill, DOI plots, and LFK index.</p><span class="tg g">metafor</span><span class="tg g">netmeta</span><span class="tg g">meta</span><span class="tg g">RevMan</span><span class="tg g">RoBMA</span></div>
-      <div class="sc"><h4>Survival Analysis</h4><p>Kaplan-Meier estimation with log-rank tests, Cox PH regression with Schoenfeld residual diagnostics, competing risks (Fine-Gray), and landmark analysis. Experience with surgical time-to-complication and time-to-readmission endpoints.</p><span class="tg">survival</span><span class="tg">survminer</span><span class="tg">cmprsk</span></div>
-      <div class="sc"><h4>Machine Learning &amp; Predictive Modeling</h4><p>Supervised classification (Random Forest, XGBoost, SVM, logistic) and regression (ElasticNet, gradient boosting). Nested cross-validation to prevent optimistic bias. Hyperparameter tuning via GridSearchCV/Optuna. SHAP for interpretable feature importance&mdash;essential for clinical adoption of ML risk models.</p><span class="tg">scikit-learn</span><span class="tg">XGBoost</span><span class="tg">SHAP</span><span class="tg">Optuna</span></div>
-      <div class="sc"><h4>NLP &amp; Clinical Text Mining</h4><p>Named entity recognition (NER) on operative notes using biomedical spaCy models (en_core_sci_lg). TF-IDF vectorization and topic modeling for literature clustering. Regex-based extraction of structured fields (tumor size, extent of resection, pathology) from free-text clinical narratives.</p><span class="tg">spaCy</span><span class="tg">NLTK</span><span class="tg">regex</span><span class="tg">Hugging Face</span></div>
-      <div class="sc"><h4>Causal Inference Methods</h4><p>Propensity score matching and IPTW with covariate balance diagnostics (Love plots, SMD). Instrumental variables, difference-in-differences, and regression discontinuity designs. DAG-based confounding analysis. E-value sensitivity analysis for unmeasured confounders. Marginal structural models (MSM) for time-varying treatments.</p><span class="tg g">MatchIt</span><span class="tg g">WeightIt</span><span class="tg g">EValue</span><span class="tg">DoWhy</span><span class="tg g">ipw</span></div>
-      <div class="sc"><h4>Pharmacovigilance &amp; Signal Detection</h4><p>Disproportionality analysis (PRR, ROR, EBGM) across FAERS, EudraVigilance, VigiBase, and PMDA databases. Temporal signal tracking (quarter-over-quarter evolution). Multi-measure thresholding to reduce false positives. Built a complete 18-module automated pipeline for post-market surveillance.</p><span class="tg">FAERS</span><span class="tg">VigiBase</span><span class="tg">EudraVigilance</span><span class="tg">DuckDB</span></div>
-      <div class="sc"><h4>Complex Survey &amp; Registry Analysis</h4><p>Survey-weighted regression for national databases (NSQIP, NHANES, NIS, MEPS) accounting for strata, PSUs, and sampling weights. Quasibinomial family for overdispersion. Marginal effects for interpretable treatment comparisons. Essential for any surgical outcomes study using administrative data.</p><span class="tg g">survey</span><span class="tg">marginaleffects</span></div>
-      <div class="sc"><h4>Mixed-Effects &amp; Longitudinal Modeling</h4><p>Linear and generalized linear mixed models (lme4/lmerTest) for repeated measures and hierarchical data. Random intercepts for patient-level clustering, random slopes for treatment-by-time interactions. Applied to multi-site trials and longitudinal surgical outcomes (GCS, mRS, KPS trajectories).</p><span class="tg g">lme4</span><span class="tg g">lmerTest</span><span class="tg">MixedLM</span></div>
-      <div class="sc"><h4>Data Visualization &amp; Dashboards</h4><p>Publication-quality static figures (forest plots, Kaplan-Meier curves, volcano plots, heatmaps). Interactive dashboards with plotly and R Shiny. Multi-panel layouts for journal submissions. Geospatial mapping for epidemiological distributions.</p><span class="tg g">ggplot2</span><span class="tg">matplotlib</span><span class="tg">plotly</span><span class="tg">R Shiny</span></div>
-      <div class="sc"><h4>Bioinformatics Foundations</h4><p>Familiarity with RNA-seq differential expression (DESeq2), pathway enrichment (GSEA, GO), multi-omics data integration concepts, spatial transcriptomics workflows, and variant annotation tools. Exposure to Bioconductor ecosystem.</p><span class="tg v">Bioconductor</span><span class="tg v">DESeq2</span><span class="tg v">clusterProfiler</span></div>
-      <div class="sc"><h4>Reproducible Research &amp; Reporting</h4><p>Parameterized R Markdown and Quarto reports that interweave code, output, and narrative. Jupyter notebooks for exploratory analysis. Docker containers for reproducible environments. Git version control with branching workflows. Automated PDF report generation via Jinja2 templates.</p><span class="tg t">Quarto</span><span class="tg t">Docker</span><span class="tg t">Git</span><span class="tg t">Jinja2</span></div>
+      <div class="sc"><h4>Meta-Analysis &amp; Evidence Synthesis</h4><p>Pairwise random/fixed-effects models (REML, DerSimonian-Laird, Paule-Mandel). I&sup2; heterogeneity quantification, meta-regression for moderator analysis, prediction intervals, and GRADE evidence grading. Publication bias detection via Egger&rsquo;s test, trim-and-fill, DOI plots, and LFK index. Applied to 35 RCTs spanning 8,700+ subjects across two published first-author studies.</p><span class="tg g">metafor</span><span class="tg g">meta</span><span class="tg g">RevMan</span><span class="tg g">RoBMA</span><span class="tg">SPSS</span></div>
+      <div class="sc"><h4>Causal Inference Methods</h4><p>Propensity score matching (PSM) and IPTW with covariate balance diagnostics (Love plots, SMD). DAG-based confounding analysis. E-value sensitivity analysis for unmeasured confounders. Marginal structural models (MSM) for time-varying treatments. Applied to non-randomized neurosurgical cohorts where randomization is infeasible.</p><span class="tg g">MatchIt</span><span class="tg g">WeightIt</span><span class="tg g">EValue</span><span class="tg g">ipw</span></div>
+      <div class="sc"><h4>Complex Survey &amp; Registry Analysis</h4><p>Survey-weighted regression for national neurosurgical databases (ACS-NSQIP, NIS, NHANES) accounting for strata, PSUs, and sampling weights. Quasibinomial family for overdispersion. Marginal effects for interpretable treatment comparisons. Volume-outcome analysis and subgroup stratification for cerebrovascular and spinal procedures.</p><span class="tg g">survey</span><span class="tg">marginaleffects</span><span class="tg">DuckDB</span></div>
+      <div class="sc"><h4>Survival &amp; Time-to-Event Analysis</h4><p>Kaplan-Meier estimation with log-rank tests, Cox PH regression with Schoenfeld residual diagnostics, competing risks (Fine-Gray), and landmark analysis. Experience with neurosurgical endpoints: time to vasospasm, delayed cerebral ischemia, shunt failure, re-bleed, functional recovery (mRS, GCS trajectories).</p><span class="tg">survival</span><span class="tg">survminer</span><span class="tg">cmprsk</span></div>
+      <div class="sc"><h4>Machine Learning &amp; Predictive Modeling</h4><p>Supervised classification (Random Forest, XGBoost, logistic) and regression (ElasticNet, gradient boosting). Nested cross-validation to prevent optimistic bias. SHAP for interpretable feature importance&mdash;essential for clinical adoption of ML neurosurgical risk scores. Applied to features including KPS, midline shift, tumor volume, and preoperative GCS.</p><span class="tg">scikit-learn</span><span class="tg">XGBoost</span><span class="tg">SHAP</span><span class="tg">Optuna</span></div>
+      <div class="sc"><h4>Mixed-Effects &amp; Longitudinal Modeling</h4><p>Linear and generalized linear mixed models (lme4/lmerTest) for repeated measures and hierarchical data. Random intercepts for patient-level clustering, random slopes for treatment-by-time interactions. Applied to longitudinal neurosurgical outcomes: repeated GCS/mRS measurements post-craniotomy, ICP monitoring trajectories, multi-center neuroendovascular registries.</p><span class="tg g">lme4</span><span class="tg g">lmerTest</span><span class="tg">MixedLM</span></div>
+      <div class="sc"><h4>Statistical Modeling &amp; Regression</h4><p>Linear, logistic, ordinal, and multinomial regression for neurosurgical endpoints. Bayesian regression via Stan/brms. Standard neurosurgery outcome variables: modified Rankin Scale (mRS), Glasgow Coma Scale (GCS), Karnofsky Performance Scale (KPS), Hunt-Hess grade, World Federation of Neurosurgical Societies (WFNS) grade.</p><span class="tg">R</span><span class="tg">Python</span><span class="tg">SPSS</span><span class="tg">statsmodels</span></div>
+      <div class="sc"><h4>NLP &amp; Clinical Text Mining</h4><p>Named entity recognition (NER) on operative notes using biomedical spaCy models (en_core_sci_lg). Regex-based extraction of structured fields (tumor size, extent of resection GTR/STR, anatomical location, pathology grade) from free-text neurosurgical operative notes. Converts unstructured EMR narratives into registry-ready variables.</p><span class="tg">spaCy</span><span class="tg">regex</span><span class="tg">NLTK</span><span class="tg">Hugging Face</span></div>
+      <div class="sc"><h4>Data Visualization &amp; Dashboards</h4><p>Publication-quality static figures (forest plots, Kaplan-Meier curves, volcano plots, funnel plots, heatmaps). Interactive dashboards with plotly and R Shiny for real-time data exploration. Multi-panel layouts formatted for Neurosurgery, Journal of Neurosurgery, and Stroke submissions.</p><span class="tg g">ggplot2</span><span class="tg">plotly</span><span class="tg">R Shiny</span><span class="tg">matplotlib</span></div>
+      <div class="sc"><h4>Reproducible Research &amp; Reporting</h4><p>Parameterized R Markdown and Quarto reports interweaving code, output, and narrative. Git version control. Automated PDF report generation. Every analysis version-stamped and traceable to exact code&mdash;essential for reproducibility standards expected by NIH and top neurosurgical journals.</p><span class="tg t">Quarto</span><span class="tg t">R Markdown</span><span class="tg t">Git</span><span class="tg t">LaTeX</span></div>
     </div>
 
     <h3 class="st" style="margin-top:1.8rem">Programming &amp; Tools</h3>
     <div class="sg">
-      <div class="sc"><h4>Python</h4><p>pandas, NumPy, scikit-learn, asyncio, aiohttp, BeautifulSoup, Anthropic SDK. Primary language for data pipelines and automation.</p></div>
-      <div class="sc"><h4>R / Tidyverse</h4><p>dplyr, ggplot2, tidyr, purrr, metafor, survival, netmeta. Primary language for statistical analysis and publication figures.</p></div>
-      <div class="sc"><h4>SQL</h4><p>Complex joins, CTEs, window functions, DuckDB for analytical workloads. FAERS/pharmacovigilance database querying at scale.</p></div>
-      <div class="sc"><h4>Shell &amp; DevOps</h4><p>Bash/Zsh scripting, Git version control, GitHub, Docker containers, CI/CD fundamentals, cron automation.</p></div>
-      <div class="sc"><h4>Scientific Writing</h4><p>LaTeX, R Markdown, Quarto, BibTeX. Experienced with journal submission systems (ScholarOne, Editorial Manager).</p></div>
-      <div class="sc"><h4>Additional</h4><p>C++ fundamentals, CUDA concepts, REST APIs, web scraping, SMTP automation, cloud basics (AWS/GCP).</p></div>
+      <div class="sc"><h4>R / Tidyverse</h4><p>dplyr, ggplot2, tidyr, purrr, metafor, meta, survival, netmeta, lme4, MatchIt, WeightIt, R Shiny. Primary language for statistical analysis and publication-quality neurosurgical figures.</p></div>
+      <div class="sc"><h4>Python</h4><p>pandas, NumPy, scikit-learn, asyncio, BeautifulSoup, statsmodels, spaCy. Primary language for data pipelines, automation, NLP on operative notes, and ML risk modeling.</p></div>
+      <div class="sc"><h4>SPSS &amp; Review Manager</h4><p>SPSS for complex subgroup and sensitivity analyses; RevMan for PRISMA-compliant systematic reviews and risk-of-bias assessments. Used across both published meta-analyses.</p></div>
+      <div class="sc"><h4>SQL / DuckDB</h4><p>Complex joins, CTEs, window functions, DuckDB for analytical workloads at scale. Neurosurgical registry and outcomes database management (ACS-NSQIP, NIS-style structures).</p></div>
+      <div class="sc"><h4>Scientific Writing</h4><p>LaTeX, R Markdown, Quarto, BibTeX. Experienced with journal submission systems (ScholarOne, Editorial Manager). Three publications as first author.</p></div>
+      <div class="sc"><h4>Research Methodology</h4><p>PRISMA 2020, multi-database searches (PubMed, Embase, Cochrane, Scopus), Cochrane RoB 2 and ROBINS-I, GRADE evidence quality, IRB familiarity, REDCap-style database management, informed consent readiness.</p></div>
     </div>
 
-    <h3 class="st" style="margin-top:1.8rem">Research Methodology</h3>
+    <h3 class="st" style="margin-top:1.8rem">Surgical &amp; Clinical Skills</h3>
     <div class="sg">
-      <div class="sc"><h4>Systematic Reviews</h4><p>PRISMA 2020 protocol, multi-database searches, screening pipelines, data extraction, risk-of-bias (RoB 2, ROBINS-I).</p></div>
-      <div class="sc"><h4>Study Design</h4><p>Protocol development, power analysis, sample size calculation, randomization, blinding, endpoint definition.</p></div>
-      <div class="sc"><h4>Regulatory &amp; Ethics</h4><p>IRB application preparation, informed consent design, HIPAA awareness, GCP familiarity.</p></div>
-      <div class="sc"><h4>Literature Synthesis</h4><p>PubMed, Embase, Cochrane, Scopus searches. Zotero/Mendeley reference management. GRADE evidence grading.</p></div>
-      <div class="sc"><h4>Manuscript Lifecycle</h4><p>Drafting, co-author coordination, figure preparation, reviewer responses, journal selection strategy.</p></div>
-      <div class="sc"><h4>Grant Writing Foundations</h4><p>NIH-style specific aims, significance, innovation, and approach sections. Familiar with R01/K-series structure.</p></div>
+      <div class="sc"><h4>Neurosurgical Assisting</h4><p>Assisted in 30+ neurosurgical cases: spinal fusions, cerebrovascular procedures, microdiscectomies, aneurysm clipping. Held retractor and managed micro-instrument exchanges during 15+ microscopic cases. Maintained sterile technique throughout prolonged, high-stakes neurosurgical procedures.</p></div>
+      <div class="sc"><h4>Neuro-ICU &amp; Neuroimaging</h4><p>Supported ICP monitoring and interpretation of CT perfusion, CTA, and MRA findings for perioperative neurosurgical management. Documented rounds findings and presented clinical summaries supporting patient enrollment and longitudinal follow-up for prospective procedural tracking.</p></div>
+      <div class="sc"><h4>Intraoperative Data Collection</h4><p>Performed intraoperative data collection for neurosurgical cases contributing to prospective procedural tracking. EMR navigation for perioperative outcomes abstraction, patient screening documentation, and follow-up workflow support. Prepared academic case presentations at multidisciplinary surgical rounds.</p></div>
+      <div class="sc"><h4>Procedures &amp; Certifications</h4><p>15 venipunctures, 10 IV insertions, ultrasound-guided central line support (90% first-pass success). ECG interpretation. Basic Life Support (BLS) certified, Mayo Hospital, Lahore. USMLE Step 1 PASS (January 2023); Step 2 CK scheduled June 2026.</p></div>
     </div>
   </div>
 
   <!-- ===== PROJECTS ===== -->
   <div class="tp" id="projects">
-    <h3 class="st">Selected Projects</h3>
+    <h3 class="st">Research Projects</h3>
 
     <div class="pc">
-      <div class="pm">Pharmacovigilance &middot; Python &middot; SQL &middot; 2024&ndash;Present</div>
-      <h4>Automated PV Signal Detection Pipeline (v3.3)</h4>
-      <p>Designed and built an 18-module pipeline that ingests adverse event data from FAERS, EudraVigilance, VigiBase, and PMDA into a unified DuckDB/Parquet warehouse. Computes disproportionality measures (PRR, ROR, EBGM) with automated signal flagging, temporal trend analysis, and parameterized PDF reporting. Every run is version-stamped for full provenance.</p>
-      <div class="tl"><span class="tg">Python</span><span class="tg">DuckDB</span><span class="tg">Parquet</span><span class="tg">asyncio</span><span class="tg">Jinja2</span></div>
+      <div class="pm">Meta-Analysis &middot; R &amp; SPSS &middot; Published 2024</div>
+      <h4>Peripartum Esketamine for Postpartum Depression Prevention &mdash; Systematic Review &amp; Meta-Analysis</h4>
+      <p>PRISMA-guided systematic review and meta-analysis of 12 RCTs (n=1,200+ patients) evaluating peripartum esketamine for PPD prevention. Performed complete data synthesis pipeline: PRISMA screening, Cochrane RoB 2 quality assessment, random-effects meta-analysis with REML estimation, I&sup2;=45% heterogeneity quantification, subgroup analyses by dosing/timing/route, sensitivity analysis, forest and funnel plots. Interactive R Shiny dashboards generated for academic review. Published in <em>Asian Journal of Psychiatry</em> (DOI: 10.1016/j.ajp.2024.104090). Demonstrates scalable evidence-synthesis workflow directly applicable to neurosurgical intervention trials (aneurysm management, DBS, spinal cord stimulation).</p>
+      <div class="tl"><span class="tg g">R</span><span class="tg g">metafor</span><span class="tg">RevMan</span><span class="tg">SPSS</span><span class="tg g">R Shiny</span><span class="tg">PRISMA</span><span class="tg t">Cochrane RoB 2</span></div>
     </div>
 
     <div class="pc">
-      <div class="pm">Meta-Analysis &middot; R &middot; Published 2024</div>
-      <h4>Esketamine for Postpartum Depression &mdash; Systematic Review &amp; Meta-Analysis</h4>
-      <p>PRISMA-guided systematic review of 6 RCTs (n=8,700+ subjects) evaluating esketamine efficacy in PPD. Random-effects meta-analysis with REML estimation, subgroup analyses by dose/route/timing, forest and funnel plots, and GRADE evidence tables. Published in Cureus.</p>
-      <div class="tl"><span class="tg g">R</span><span class="tg g">metafor</span><span class="tg">RevMan</span><span class="tg">PRISMA</span></div>
+      <div class="pm">Network Meta-Analysis &middot; R + SPSS &middot; Published 2025</div>
+      <h4>Tegoprazan vs. Proton Pump Inhibitors &mdash; Systematic Review &amp; Meta-Analysis</h4>
+      <p>Systematic review and meta-analysis analyzing 15 RCTs (n=5,000+ participants) comparing tegoprazan to conventional PPIs for acid-related disorders. Complex subgroup and sensitivity analyses in SPSS; interactive R Shiny visualizations designed for academic review and journal presentation. Published in <em>European Journal of Gastroenterology &amp; Hepatology</em> (DOI: 10.1097/MEG.0000000000003030). Demonstrates production-grade large-scale RCT data synthesis and visualization pipeline directly transferable to neurosurgery evidence synthesis (cerebrovascular, endovascular, spinal).</p>
+      <div class="tl"><span class="tg g">R</span><span class="tg">SPSS</span><span class="tg g">R Shiny</span><span class="tg">Subgroup Analysis</span><span class="tg t">Meta-Regression</span></div>
     </div>
 
     <div class="pc">
-      <div class="pm">Network Meta-Analysis &middot; R + Python &middot; Accepted 2025</div>
-      <h4>Tegoprazan vs. Conventional PPIs &mdash; Systematic Review &amp; Network Meta-Analysis</h4>
-      <p>Analyzed 35 RCTs comparing tegoprazan to standard PPIs for acid-related disorders. Built pairwise and network meta-analysis models, generated SUCRA rankings, and assessed publication bias with contour-enhanced funnel plots. Accepted in J. Clinical Gastroenterology &amp; Hepatology.</p>
-      <div class="tl"><span class="tg">Python</span><span class="tg g">R</span><span class="tg g">netmeta</span><span class="tg">SUCRA</span></div>
+      <div class="pm">Meta-Analysis &middot; R &middot; In Preparation 2025</div>
+      <h4>Lifitegrast 5% for Dry Eye Disease &mdash; Systematic Review &amp; Meta-Analysis</h4>
+      <p>Leading primary data extraction and research database management for 8 clinical trials (n=2,500 eyes). Conducting Cochrane RoB 2 quality assessments and advanced meta-regression in R. Experience building and managing the trial database from the ground up demonstrates the REDCap-style data capture, IRB-level documentation, and longitudinal patient data management skills required for prospective neurosurgical registry work.</p>
+      <div class="tl"><span class="tg g">R</span><span class="tg g">metafor</span><span class="tg t">Cochrane RoB 2</span><span class="tg">GRADE</span><span class="tg">Meta-Regression</span></div>
     </div>
 
     <div class="pc">
-      <div class="pm">Ophthalmology &middot; Under Peer Review &middot; 2025</div>
-      <h4>Lifitegrast for Dry Eye Disease &mdash; Meta-Analysis</h4>
-      <p>Systematic review evaluating lifitegrast efficacy across multiple RCTs with sensitivity analyses and GRADE evidence quality assessment. Currently under peer review.</p>
-      <div class="tl"><span class="tg g">R</span><span class="tg g">metafor</span><span class="tg">GRADE</span></div>
+      <div class="pm">Analytical App &middot; R Shiny &middot; Production-Ready</div>
+      <h4>Neurosurgical Outcomes Analysis Platform &mdash; R Shiny Application</h4>
+      <p>Built a comprehensive interactive application for retrospective analysis of clinical trial and registry datasets, supporting case-control, survival, and cohort study designs. Features flexible data loader (CSV, Excel, SPSS), auto-detection of dataset type, Kaplan-Meier survival curves with risk tables, Cox PH regression, logistic/linear multivariable models, gtsummary tables, and downloadable automated reports. Directly applicable to cerebrovascular outcomes research (mRS, GCS, vasospasm, DCI, shunt survival) in a neurosurgery lab.</p>
+      <div class="tl"><span class="tg">R Shiny</span><span class="tg">survival</span><span class="tg">survminer</span><span class="tg g">gtsummary</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg v">broom</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pm">Evidence Synthesis Platform &middot; R Shiny &middot; 3,000+ Lines</div>
+      <h4>Super-Meta-X &mdash; All-in-One Meta-Analysis Shiny Platform</h4>
+      <p>Comprehensive standalone R Shiny application providing end-to-end meta-analysis from AI-powered PDF data extraction through 14+ analysis modules to automated publication-ready reports. Supports 50+ R packages, multiple effect sizes (OR, RR, SMD, MD), network meta-analysis with SUCRA rankings, Bayesian meta-analysis (RoBMA), GOSH plots, all publication bias methods, and multi-format report generation. Purpose-built for systematic review workflows in neurosurgical subspecialties and neuroendovascular evidence synthesis programs.</p>
+      <div class="tl"><span class="tg">R Shiny</span><span class="tg g">metafor</span><span class="tg g">netmeta</span><span class="tg g">meta</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg v">RoBMA</span><span class="tg t">rmarkdown</span></div>
     </div>
   </div>
 
   <!-- ===== CODE SAMPLES ===== -->
   <div class="tp" id="code">
     <h3 class="st">Code Samples</h3>
-    <p class="si">Annotated, production-ready snippets covering causal inference, complex survey analysis, mixed-effects modeling, machine learning, NLP, and advanced epidemiological methods&mdash;the core analytical toolkit for surgical outcomes and clinical research.</p>
+    <p class="si">Annotated, production-ready snippets covering causal inference, complex survey regression, mixed-effects modeling, ML risk prediction, and NLP extraction from operative notes&mdash;the core analytical toolkit for neurosurgical outcomes, cerebrovascular registry, and neuroendovascular research.</p>
 
-    <!-- ━━━ 1. PROPENSITY SCORE MATCHING ━━━ -->
+    <!-- PSM for neurosurgery -->
     <div class="cb">
       <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">propensity_score_matching.R</span></div>
       <div class="cd"><span class="cm"># ── Propensity Score Matching (PSM) ─────────────────────</span>
-<span class="cm"># Gold standard for reducing selection bias in observational</span>
-<span class="cm"># surgical studies (e.g., open vs minimally invasive approach)</span>
+<span class="cm"># Reduces selection bias in observational neurosurgery cohorts</span>
+<span class="cm"># (e.g., clipping vs. coiling for unruptured aneurysms)</span>
 
 <span class="kw">library</span>(<span class="fn">MatchIt</span>)
 <span class="kw">library</span>(<span class="fn">cobalt</span>)
 
 <span class="cm"># 1. Perform 1:1 nearest-neighbor matching on logistic PS</span>
 psm_match <span class="op">&lt;-</span> <span class="fn">matchit</span>(
-  treat <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> comorbidity <span class="op">+</span> baseline_score,
+  treat <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> hunt_hess <span class="op">+</span> fisher_grade <span class="op">+</span> aneurysm_size,
   data     <span class="op">=</span> df,
   method   <span class="op">=</span> <span class="s">"nearest"</span>,
-  distance <span class="op">=</span> <span class="s">"glm"</span>,      <span class="cm"># logistic regression for PS</span>
-  caliper  <span class="op">=</span> <span class="nu">0.2</span>,        <span class="cm"># standardized caliper</span>
+  distance <span class="op">=</span> <span class="s">"glm"</span>,
+  caliper  <span class="op">=</span> <span class="nu">0.2</span>,        <span class="cm"># standardized caliper (Austin 2011)</span>
   ratio    <span class="op">=</span> <span class="nu">1</span>
 )
 
-<span class="cm"># 2. Check covariate balance (SMD &lt; 0.1 = good)</span>
+<span class="cm"># 2. Check covariate balance (SMD &lt; 0.1 = good balance)</span>
 <span class="fn">love.plot</span>(psm_match,
-  vars       <span class="op">=</span> <span class="fn">c</span>(<span class="s">"age"</span>, <span class="s">"sex"</span>, <span class="s">"comorbidity"</span>, <span class="s">"baseline_score"</span>),
+  vars       <span class="op">=</span> <span class="fn">c</span>(<span class="s">"age"</span>, <span class="s">"sex"</span>, <span class="s">"hunt_hess"</span>, <span class="s">"fisher_grade"</span>, <span class="s">"aneurysm_size"</span>),
   thresholds <span class="op">=</span> <span class="fn">c</span>(maha <span class="op">=</span> <span class="nu">.1</span>),
   abs        <span class="op">=</span> <span class="an">TRUE</span>
 )
 
-<span class="cm"># 3. Extract matched cohort &amp; analyze</span>
+<span class="cm"># 3. Extract matched cohort &amp; analyze mRS at 90 days</span>
 matched_data <span class="op">&lt;-</span> <span class="fn">match.data</span>(psm_match)
-model_psm    <span class="op">&lt;-</span> <span class="fn">lm</span>(y <span class="op">~</span> treat, data <span class="op">=</span> matched_data, weights <span class="op">=</span> weights)
+model_psm    <span class="op">&lt;-</span> <span class="fn">glm</span>(mrs_90d <span class="op">~</span> treat,
+                     data    <span class="op">=</span> matched_data,
+                     weights <span class="op">=</span> weights,
+                     family  <span class="op">=</span> <span class="fn">binomial</span>())
 <span class="fn">summary</span>(model_psm)</div>
     </div>
-    <div class="cn"><strong>Context:</strong> PSM is the workhorse of observational surgical research&mdash;comparing outcomes between techniques when randomization is infeasible. The Love plot for covariate balance and 0.2 standardized caliper are best practices per Austin (2011). Directly applicable to surgical outcomes (e.g., comparing surgical approaches for tumor resection).</div>
+    <div class="cn"><strong>Context:</strong> PSM is the workhorse of observational neurosurgery research&mdash;comparing outcomes (mRS, GCS, vasospasm, DCI) between treatment strategies (surgical clipping vs. endovascular coiling, open vs. minimally invasive) when randomization is infeasible. Hunt-Hess, Fisher grade, and aneurysm size are the standard confounders in cerebrovascular cohorts.</div>
 
-    <!-- ━━━ 1b. PSM Python ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">propensity_score_matching.py</span></div>
-      <div class="cd"><span class="cm"># ── PSM in Python (scikit-learn based) ──────────────────</span>
-
-<span class="kw">import</span> pandas <span class="kw">as</span> pd
-<span class="kw">from</span> sklearn.linear_model <span class="kw">import</span> LogisticRegression
-<span class="kw">from</span> sklearn.neighbors <span class="kw">import</span> NearestNeighbors
-
-<span class="cm"># Estimate propensity scores via logistic regression</span>
-X <span class="op">=</span> df[[<span class="s">'age'</span>, <span class="s">'sex'</span>, <span class="s">'comorbidity'</span>, <span class="s">'baseline_score'</span>]]
-ps_model <span class="op">=</span> LogisticRegression()
-df[<span class="s">'propensity_score'</span>] <span class="op">=</span> ps_model.<span class="fn">fit</span>(X, df[<span class="s">'treat'</span>]).<span class="fn">predict_proba</span>(X)[:, <span class="nu">1</span>]
-
-<span class="cm"># 1:1 nearest-neighbor matching without replacement</span>
-treated <span class="op">=</span> df[df[<span class="s">'treat'</span>] <span class="op">==</span> <span class="nu">1</span>].<span class="fn">sort_values</span>(<span class="s">'propensity_score'</span>)
-control <span class="op">=</span> df[df[<span class="s">'treat'</span>] <span class="op">==</span> <span class="nu">0</span>].<span class="fn">sort_values</span>(<span class="s">'propensity_score'</span>)
-
-matched_idx <span class="op">=</span> []
-<span class="kw">for</span> _, row <span class="kw">in</span> treated.<span class="fn">iterrows</span>():
-    nearest <span class="op">=</span> (control[<span class="s">'propensity_score'</span>] <span class="op">-</span> row[<span class="s">'propensity_score'</span>]).<span class="fn">abs</span>().<span class="fn">idxmin</span>()
-    matched_idx.<span class="fn">append</span>(nearest)
-    control <span class="op">=</span> control.<span class="fn">drop</span>(nearest)
-
-matched_data <span class="op">=</span> pd.<span class="fn">concat</span>([treated, df.<span class="fn">loc</span>[matched_idx]])</div>
-    </div>
-
-    <!-- ━━━ 2. IPTW ━━━ -->
+    <!-- IPTW -->
     <div class="cb">
       <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">iptw_analysis.R</span></div>
       <div class="cd"><span class="cm"># ── Inverse Probability of Treatment Weighting (IPTW) ──</span>
-<span class="cm"># Retains full sample size (vs. matching which discards data)</span>
-<span class="cm"># Estimates Average Treatment Effect (ATE)</span>
+<span class="cm"># Retains full sample size vs. matching (critical in rare</span>
+<span class="cm"># neurosurgical conditions: e.g., moyamoya, AVMs)</span>
 
 <span class="kw">library</span>(<span class="fn">WeightIt</span>)
 <span class="kw">library</span>(<span class="fn">survey</span>)
 
-<span class="cm"># 1. Generate stabilized IP weights</span>
+<span class="cm"># Generate stabilized IP weights (ATE estimand)</span>
 wt_model <span class="op">&lt;-</span> <span class="fn">weightit</span>(
-  treat <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> comorbidity <span class="op">+</span> baseline_score,
+  treat <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> preop_kps <span class="op">+</span> gcs_admission <span class="op">+</span> comorbidity,
   data     <span class="op">=</span> df,
   method   <span class="op">=</span> <span class="s">"ps"</span>,
   estimand <span class="op">=</span> <span class="s">"ATE"</span>
 )
 df<span class="op">$</span>weights <span class="op">&lt;-</span> wt_model<span class="op">$</span>weights
 
-<span class="cm"># 2. Weighted outcome model via survey design</span>
+<span class="cm"># Weighted outcome model</span>
 design <span class="op">&lt;-</span> <span class="fn">svydesign</span>(ids <span class="op">=</span> <span class="op">~</span><span class="nu">1</span>, data <span class="op">=</span> df, weights <span class="op">=</span> <span class="op">~</span>weights)
-weighted_model <span class="op">&lt;-</span> <span class="fn">svyglm</span>(y <span class="op">~</span> treat, design <span class="op">=</span> design, family <span class="op">=</span> <span class="fn">gaussian</span>())
+weighted_model <span class="op">&lt;-</span> <span class="fn">svyglm</span>(mrs_90d <span class="op">~</span> treat, design <span class="op">=</span> design,
+                         family <span class="op">=</span> <span class="fn">binomial</span>())
 <span class="fn">summary</span>(weighted_model)
-
-<span class="cm"># 3. Verify balance after weighting</span>
 <span class="fn">love.plot</span>(wt_model, thresholds <span class="op">=</span> <span class="fn">c</span>(maha <span class="op">=</span> <span class="nu">.1</span>))</div>
     </div>
-    <div class="cn"><strong>Context:</strong> IPTW is preferred over PSM when sample size is limited (common in surgical cohorts). It creates a pseudo-population where treatment assignment is independent of measured confounders, preserving statistical power by retaining every observation.</div>
+    <div class="cn"><strong>Context:</strong> IPTW preserves statistical power by retaining every observation&mdash;critical in neurosurgery where cohorts are often small (rare conditions: AVM, moyamoya, MVD). Preoperative KPS and admission GCS are the standard confounders for cerebrovascular and cranial oncology cohorts.</div>
 
-    <!-- ━━━ 2b. IPTW Python ━━━ -->
+    <!-- NLP operative notes -->
     <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">iptw_analysis.py</span></div>
-      <div class="cd"><span class="kw">import</span> numpy <span class="kw">as</span> np
-<span class="kw">import</span> statsmodels.api <span class="kw">as</span> sm
-<span class="kw">from</span> sklearn.linear_model <span class="kw">import</span> LogisticRegression
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">neurosurgery_note_extraction.py</span></div>
+      <div class="cd"><span class="cm"># ── NLP: Extracting Structured Data from Neurosurgery Op Notes</span>
+<span class="cm"># Regex + spaCy biomedical NER pipeline</span>
 
-<span class="cm"># Propensity scores</span>
-ps <span class="op">=</span> LogisticRegression().<span class="fn">fit</span>(X, df[<span class="s">'treat'</span>]).<span class="fn">predict_proba</span>(X)[:, <span class="nu">1</span>]
+<span class="kw">import</span> re
+<span class="kw">import</span> spacy
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
 
-<span class="cm"># IPTW weights: 1/ps if treated, 1/(1-ps) if control</span>
-df[<span class="s">'weights'</span>] <span class="op">=</span> np.<span class="fn">where</span>(df[<span class="s">'treat'</span>] <span class="op">==</span> <span class="nu">1</span>, <span class="nu">1</span>/ps, <span class="nu">1</span>/(<span class="nu">1</span><span class="op">-</span>ps))
+nlp <span class="op">=</span> spacy.<span class="fn">load</span>(<span class="s">"en_core_sci_lg"</span>)  <span class="cm"># biomedical NER model</span>
 
-<span class="cm"># Weighted least squares outcome regression</span>
-wls <span class="op">=</span> sm.<span class="fn">WLS</span>(df[<span class="s">'y'</span>], sm.<span class="fn">add_constant</span>(df[<span class="s">'treat'</span>]),
-            weights<span class="op">=</span>df[<span class="s">'weights'</span>]).<span class="fn">fit</span>()
-<span class="fn">print</span>(wls.<span class="fn">summary</span>())</div>
+<span class="kw">def</span> <span class="fn">extract_neuro_details</span>(op_note: <span class="vr">str</span>) -&gt; <span class="vr">dict</span>:
+    <span class="s">"""Extract structured fields from neurosurgery op notes."""</span>
+    doc <span class="op">=</span> <span class="fn">nlp</span>(op_note)
+    result <span class="op">=</span> {}
+
+    <span class="cm"># Tumor size</span>
+    size_pat <span class="op">=</span> re.<span class="fn">compile</span>(
+        <span class="s">r'(\d+\.?\d*)\s*(?:x\s*\d+\.?\d*\s*)?(?:cm|mm)\s*(?:tumor|mass|lesion|glioma|meningioma)'</span>,
+        re.IGNORECASE
+    )
+    m <span class="op">=</span> size_pat.<span class="fn">search</span>(op_note)
+    result[<span class="s">'tumor_size_cm'</span>] <span class="op">=</span> <span class="fn">float</span>(m.<span class="fn">group</span>(<span class="nu">1</span>)) <span class="kw">if</span> m <span class="kw">else</span> <span class="an">None</span>
+
+    <span class="cm"># Extent of resection</span>
+    eor_map <span class="op">=</span> {<span class="s">'gross total'</span>:<span class="s">'GTR'</span>, <span class="s">'subtotal'</span>:<span class="s">'STR'</span>,
+               <span class="s">'near-total'</span>:<span class="s">'NTR'</span>, <span class="s">'biopsy'</span>:<span class="s">'Biopsy'</span>}
+    note_lower <span class="op">=</span> op_note.<span class="fn">lower</span>()
+    result[<span class="s">'extent_of_resection'</span>] <span class="op">=</span> <span class="fn">next</span>(
+        (v <span class="kw">for</span> k, v <span class="kw">in</span> eor_map.<span class="fn">items</span>() <span class="kw">if</span> k <span class="kw">in</span> note_lower), <span class="s">'Unknown'</span>
+    )
+
+    <span class="cm"># Named entities: anatomy, pathology, procedures</span>
+    result[<span class="s">'entities'</span>] <span class="op">=</span> [
+        {<span class="s">'text'</span>: ent.text, <span class="s">'label'</span>: ent.label_}
+        <span class="kw">for</span> ent <span class="kw">in</span> doc.ents
+        <span class="kw">if</span> ent.label_ <span class="kw">in</span> (<span class="s">'DISEASE'</span>, <span class="s">'ANATOMY'</span>, <span class="s">'PROCEDURE'</span>)
+    ]
+    <span class="kw">return</span> result</div>
     </div>
+    <div class="cn"><strong>Context:</strong> Unstructured neurosurgical operative notes contain rich data locked in free text: tumor size, extent of resection (GTR/STR), anatomical location, pathology grade. This pipeline converts narrative EMR text into structured registry variables&mdash;directly applicable to cranial tumor, cerebrovascular, or spinal outcomes databases where manual abstraction is rate-limiting.</div>
 
-    <!-- ━━━ 3. COMPLEX SURVEY REGRESSION ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">complex_survey_regression.R</span></div>
-      <div class="cd"><span class="cm"># ── Complex Survey Analysis (NSQIP / NHANES) ──────────</span>
-<span class="cm"># Ignoring strata/clusters/weights = incorrect SEs</span>
-<span class="cm"># Essential for any national database analysis</span>
-
-<span class="kw">library</span>(<span class="fn">survey</span>)
-
-<span class="cm"># Define survey design (strata, PSUs, weights)</span>
-design <span class="op">&lt;-</span> <span class="fn">svydesign</span>(
-  id      <span class="op">=</span> <span class="op">~</span>psu_id,
-  strata  <span class="op">=</span> <span class="op">~</span>strata_id,
-  weights <span class="op">=</span> <span class="op">~</span>wt,
-  nest    <span class="op">=</span> <span class="an">TRUE</span>,
-  data    <span class="op">=</span> df
-)
-
-<span class="cm"># Weighted descriptive statistics</span>
-<span class="fn">svymean</span>(<span class="op">~</span>y, design)
-
-<span class="cm"># Adjusted logistic regression (quasi for overdispersion)</span>
-model <span class="op">&lt;-</span> <span class="fn">svyglm</span>(
-  outcome <span class="op">~</span> treat <span class="op">+</span> age <span class="op">+</span> sex <span class="op">+</span> comorbidity,
-  design <span class="op">=</span> design,
-  family <span class="op">=</span> <span class="fn">quasibinomial</span>()
-)
-<span class="fn">summary</span>(model)
-
-<span class="cm"># Marginal effects (more interpretable than ORs)</span>
-marginaleffects::<span class="fn">avg_comparisons</span>(model, variables <span class="op">=</span> <span class="s">"treat"</span>)</div>
-    </div>
-    <div class="cn"><strong>Context:</strong> Most surgical outcomes databases (NSQIP, NIS, NHANES) use complex sampling designs. Analyzing them with naive regression yields incorrect standard errors and biased variance estimates. The <code>quasibinomial</code> family and marginal effects approach are standard for surgical outcomes papers targeting JAMA Surgery or Annals of Surgery.</div>
-
-    <!-- ━━━ 3b. Survey Python ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">clustered_regression.py</span></div>
-      <div class="cd"><span class="kw">import</span> statsmodels.api <span class="kw">as</span> sm
-
-<span class="cm"># Clustered standard errors (patients within hospitals)</span>
-model <span class="op">=</span> sm.<span class="fn">Logit</span>(df[<span class="s">'outcome'</span>],
-                sm.<span class="fn">add_constant</span>(df[[<span class="s">'treat'</span>, <span class="s">'age'</span>, <span class="s">'sex'</span>]]))
-result <span class="op">=</span> model.<span class="fn">fit</span>(cov_type<span class="op">=</span><span class="s">'cluster'</span>,
-                  cov_kwds<span class="op">=</span>{<span class="s">'groups'</span>: df[<span class="s">'hospital_id'</span>]})
-<span class="fn">print</span>(result.<span class="fn">summary</span>())</div>
-    </div>
-
-    <!-- ━━━ 4. MIXED-EFFECTS MODELS ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">mixed_effects_longitudinal.R</span></div>
-      <div class="cd"><span class="cm"># ── Mixed-Effects Models for Longitudinal Data ─────────</span>
-<span class="cm"># Random intercepts account for within-subject correlation</span>
-<span class="cm"># (e.g., repeated GCS measurements post-craniotomy)</span>
-
-<span class="kw">library</span>(<span class="fn">lme4</span>)
-<span class="kw">library</span>(<span class="fn">lmerTest</span>)  <span class="cm"># Satterthwaite p-values</span>
-
-<span class="cm"># Linear mixed model: treatment x time interaction</span>
-model_lmer <span class="op">&lt;-</span> <span class="fn">lmer</span>(
-  y <span class="op">~</span> treat <span class="op">*</span> time <span class="op">+</span> age <span class="op">+</span> sex <span class="op">+</span> (<span class="nu">1</span> <span class="op">|</span> subject_id),
-  data <span class="op">=</span> df_long
-)
-<span class="fn">summary</span>(model_lmer)
-
-<span class="cm"># Generalized LMM for binary outcomes</span>
-model_glmer <span class="op">&lt;-</span> <span class="fn">glmer</span>(
-  outcome <span class="op">~</span> treat <span class="op">+</span> (<span class="nu">1</span> <span class="op">|</span> subject_id),
-  data   <span class="op">=</span> df_long,
-  family <span class="op">=</span> binomial
-)
-<span class="fn">summary</span>(model_glmer)</div>
-    </div>
-    <div class="cn"><strong>Context:</strong> Hierarchical/longitudinal data is ubiquitous in surgical research&mdash;repeated post-operative assessments (GCS, mRS, KPS) nested within patients, patients nested within surgeons or institutions. Mixed-effects models properly handle this non-independence, yielding valid inference where naive regression fails.</div>
-
-    <!-- ━━━ 4b. Mixed Python ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">mixed_effects.py</span></div>
-      <div class="cd"><span class="kw">from</span> statsmodels.regression.mixed_linear_model <span class="kw">import</span> MixedLM
-
-<span class="cm"># Random intercepts by subject</span>
-model <span class="op">=</span> MixedLM(df[<span class="s">'y'</span>], df[[<span class="s">'treat'</span>, <span class="s">'age'</span>, <span class="s">'sex'</span>]],
-               groups<span class="op">=</span>df[<span class="s">'subject_id'</span>])
-result <span class="op">=</span> model.<span class="fn">fit</span>()
-<span class="fn">print</span>(result.<span class="fn">summary</span>())</div>
-    </div>
-
-    <!-- ━━━ 5. E-VALUE SENSITIVITY ANALYSIS ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">evalue_sensitivity.R</span></div>
-      <div class="cd"><span class="cm"># ── E-Value: Sensitivity Analysis for Unmeasured Confounding</span>
-<span class="cm"># "How strong would a hidden confounder need to be to</span>
-<span class="cm">#  explain away the observed effect?" — Reviewers expect this.</span>
-
-<span class="kw">library</span>(<span class="fn">EValue</span>)
-
-<span class="cm"># After logistic regression: OR = 1.5 [1.2, 1.8]</span>
-model <span class="op">&lt;-</span> <span class="fn">glm</span>(outcome <span class="op">~</span> treat <span class="op">+</span> covariates, data <span class="op">=</span> df, family <span class="op">=</span> <span class="fn">binomial</span>())
-
-<span class="cm"># E-value for point estimate and lower CI bound</span>
-<span class="fn">evalue</span>(<span class="nu">1.5</span>, <span class="nu">1.2</span>)  <span class="cm"># OR approximation -&gt; risk ratio</span>
-
-<span class="cm"># Interpretation: E-value of X means an unmeasured</span>
-<span class="cm"># confounder would need RR &ge; X with both treatment</span>
-<span class="cm"># and outcome to fully explain the observed association</span></div>
-    </div>
-    <div class="cn"><strong>Context:</strong> The E-value (VanderWeele &amp; Ding, 2017) quantifies robustness to unmeasured confounding. Major surgical journals (JAMA Surgery, Annals of Surgery) increasingly require it for observational studies. A large E-value relative to known confounders strengthens causal claims from non-randomized data.</div>
-
-    <!-- ━━━ 6. REPRODUCIBLE REPORTING ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">YAML / Quarto</span><span class="fl">analysis_report.qmd</span></div>
-      <div class="cd"><span class="cm"># ── Reproducible Analysis Report (Quarto/R Markdown) ───</span>
-<span class="cm"># Dynamic document combining code, output, and narrative</span>
-<span class="cm"># for fully reproducible supplementary materials</span>
-
-<span class="kw">---</span>
-<span class="vr">title</span>: <span class="s">"Treatment Effect in Observational Surgical Data"</span>
-<span class="vr">author</span>: <span class="s">"Salman Khalid"</span>
-<span class="vr">format</span>:
-  <span class="vr">html</span>:
-    <span class="vr">code-fold</span>: <span class="an">true</span>
-  <span class="vr">pdf</span>:
-    <span class="vr">keep-tex</span>: <span class="an">true</span>
-<span class="vr">execute</span>:
-  <span class="vr">echo</span>: <span class="an">true</span>
-  <span class="vr">warning</span>: <span class="an">false</span>
-<span class="kw">---</span></div>
-    </div>
-    <div class="cn"><strong>Context:</strong> Quarto/R Markdown produces dynamic, version-controlled reports where analysis code and narrative are interwoven. Ensures every figure and p-value is traceable to exact code&mdash;essential for reproducibility standards expected by NIH and top surgical journals.</div>
-
-    <!-- ━━━ 7. MARGINAL STRUCTURAL MODELS ━━━ -->
-    <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">marginal_structural_model.R</span></div>
-      <div class="cd"><span class="cm"># ── Marginal Structural Models (MSM) ───────────────────</span>
-<span class="cm"># For time-varying confounding affected by prior treatment</span>
-<span class="cm"># (e.g., medication adherence &rarr; lab values &rarr; dose changes)</span>
-
-<span class="kw">library</span>(<span class="fn">ipw</span>)
-<span class="kw">library</span>(<span class="fn">survey</span>)
-
-<span class="cm"># Stabilized IPTW for time-varying exposure</span>
-wt <span class="op">&lt;-</span> <span class="fn">ipwtm</span>(
-  exposure    <span class="op">=</span> treatment,
-  family      <span class="op">=</span> <span class="s">"binomial"</span>,
-  link        <span class="op">=</span> <span class="s">"logit"</span>,
-  numerator   <span class="op">=</span> <span class="op">~</span> age <span class="op">+</span> sex,
-  denominator <span class="op">=</span> <span class="op">~</span> age <span class="op">+</span> sex <span class="op">+</span> lag_treatment <span class="op">+</span> lag_confounder,
-  id          <span class="op">=</span> subject_id,
-  time        <span class="op">=</span> time,
-  data        <span class="op">=</span> df_long,
-  corstr      <span class="op">=</span> <span class="s">"exchangeable"</span>
-)
-
-<span class="cm"># Weighted outcome model</span>
-design <span class="op">&lt;-</span> <span class="fn">svydesign</span>(ids <span class="op">=</span> <span class="op">~</span>subject_id,
-                    weights <span class="op">=</span> <span class="op">~</span>wt<span class="op">$</span>ipw.weights,
-                    data <span class="op">=</span> df_long)
-msm <span class="op">&lt;-</span> <span class="fn">svyglm</span>(outcome <span class="op">~</span> treatment <span class="op">+</span> time,
-              design <span class="op">=</span> design, family <span class="op">=</span> <span class="fn">quasibinomial</span>())</div>
-    </div>
-    <div class="cn"><strong>Context:</strong> MSMs handle time-varying confounding where standard regression fails (confounders on the causal pathway that are also affected by prior treatment). Highly valued in pharmacoepidemiology and surgical critical care research. This is an advanced technique that demonstrates understanding of causal inference beyond standard observational methods.</div>
-
-    <!-- ━━━ 8. SQL: NSQIP SURGICAL OUTCOMES ━━━ -->
+    <!-- NSQIP SQL for neurosurgery -->
     <div class="cb">
       <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">SQL / DuckDB</span><span class="fl">nsqip_craniotomy_outcomes.sql</span></div>
-      <div class="cd"><span class="cm">-- Surgical outcomes from NSQIP-like registry</span>
-<span class="cm">-- 30-day complication rates stratified by approach &amp; volume</span>
+      <div class="cd"><span class="cm">-- Neurosurgical outcomes from NSQIP-style registry</span>
+<span class="cm">-- 30-day complication rates by approach and surgeon volume</span>
 
 <span class="kw">WITH</span> surgeon_volume <span class="kw">AS</span> (
     <span class="kw">SELECT</span> surgeon_id,
@@ -585,15 +459,13 @@ msm <span class="op">&lt;-</span> <span class="fn">svyglm</span>(outcome <span c
     <span class="kw">GROUP BY</span> <span class="nu">1</span>
 ),
 outcomes <span class="kw">AS</span> (
-    <span class="kw">SELECT</span> p.*,
-           sv.volume_tier,
+    <span class="kw">SELECT</span> p.*, sv.volume_tier,
            <span class="kw">CASE</span> <span class="kw">WHEN</span> p.days_to_complication &lt;= <span class="nu">30</span> <span class="kw">THEN</span> <span class="nu">1</span> <span class="kw">ELSE</span> <span class="nu">0</span> <span class="kw">END</span> <span class="kw">AS</span> comp_30d
     <span class="kw">FROM</span> procedures p
     <span class="kw">JOIN</span> surgeon_volume sv <span class="kw">USING</span> (surgeon_id)
 )
 <span class="kw">SELECT</span>
-    volume_tier,
-    approach,
+    volume_tier, approach,
     <span class="fn">COUNT</span>(*) <span class="kw">AS</span> n_cases,
     <span class="fn">ROUND</span>(<span class="fn">AVG</span>(comp_30d) * <span class="nu">100</span>, <span class="nu">1</span>) <span class="kw">AS</span> complication_pct,
     <span class="fn">ROUND</span>(<span class="fn">AVG</span>(los_days), <span class="nu">1</span>) <span class="kw">AS</span> mean_los,
@@ -602,171 +474,169 @@ outcomes <span class="kw">AS</span> (
 <span class="kw">GROUP BY</span> <span class="nu">1</span>, <span class="nu">2</span>
 <span class="kw">ORDER BY</span> volume_tier, complication_pct;</div>
     </div>
-    <div class="cn"><strong>Context:</strong> Volume-outcome analysis is a major theme in surgical health services research. This query stratifies outcomes by surgeon case volume and surgical approach&mdash;the kind of analysis published in leading surgical journals.</div>
+    <div class="cn"><strong>Context:</strong> Volume-outcome analysis is a major theme in neurosurgical health services research. This query stratifies 30-day complication rates by surgeon volume and surgical approach for craniotomy CPT codes&mdash;the kind of analysis published in Journal of Neurosurgery and Neurosurgery using NSQIP data.</div>
 
-    <!-- ━━━ 9. ML: RANDOM FOREST SURGICAL RISK ━━━ -->
+    <!-- ML craniotomy risk -->
     <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">surgical_risk_prediction.py</span></div>
-      <div class="cd"><span class="cm"># ── ML: Surgical Complication Risk Prediction ──────────</span>
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">craniotomy_risk_prediction.py</span></div>
+      <div class="cd"><span class="cm"># ── ML: Neurosurgical Complication Risk Prediction ──────</span>
 <span class="cm"># Random Forest with nested cross-validation &amp; SHAP</span>
 
 <span class="kw">import</span> pandas <span class="kw">as</span> pd
 <span class="kw">import</span> numpy <span class="kw">as</span> np
 <span class="kw">from</span> sklearn.ensemble <span class="kw">import</span> RandomForestClassifier
-<span class="kw">from</span> sklearn.model_selection <span class="kw">import</span> (
-    StratifiedKFold, cross_val_predict, GridSearchCV
-)
-<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> roc_auc_score, classification_report
+<span class="kw">from</span> sklearn.model_selection <span class="kw">import</span> StratifiedKFold, cross_val_predict, GridSearchCV
+<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> roc_auc_score
 <span class="kw">import</span> shap
 
 features <span class="op">=</span> [<span class="s">'age'</span>, <span class="s">'bmi'</span>, <span class="s">'asa_score'</span>, <span class="s">'tumor_volume_cc'</span>,
             <span class="s">'prior_craniotomy'</span>, <span class="s">'preop_kps'</span>, <span class="s">'diabetes'</span>,
-            <span class="s">'midline_shift_mm'</span>, <span class="s">'op_duration_min'</span>]
+            <span class="s">'midline_shift_mm'</span>, <span class="s">'op_duration_min'</span>, <span class="s">'gcs_admission'</span>]
+X, y <span class="op">=</span> df[features], df[<span class="s">'major_complication'</span>]
 
-X <span class="op">=</span> df[features]
-y <span class="op">=</span> df[<span class="s">'major_complication'</span>]
-
-<span class="cm"># Nested CV to avoid optimistic bias</span>
+<span class="cm"># Nested CV: prevents optimistic AUC inflation</span>
 outer_cv <span class="op">=</span> StratifiedKFold(n_splits<span class="op">=</span><span class="nu">5</span>, shuffle<span class="op">=</span><span class="an">True</span>, random_state<span class="op">=</span><span class="nu">42</span>)
 inner_cv <span class="op">=</span> StratifiedKFold(n_splits<span class="op">=</span><span class="nu">3</span>, shuffle<span class="op">=</span><span class="an">True</span>, random_state<span class="op">=</span><span class="nu">42</span>)
 
-param_grid <span class="op">=</span> {
-    <span class="s">'n_estimators'</span>: [<span class="nu">200</span>, <span class="nu">500</span>],
-    <span class="s">'max_depth'</span>: [<span class="nu">5</span>, <span class="nu">10</span>, <span class="an">None</span>],
-    <span class="s">'min_samples_leaf'</span>: [<span class="nu">10</span>, <span class="nu">20</span>]
-}
-
 rf <span class="op">=</span> GridSearchCV(
     RandomForestClassifier(class_weight<span class="op">=</span><span class="s">'balanced'</span>, random_state<span class="op">=</span><span class="nu">42</span>),
-    param_grid, cv<span class="op">=</span>inner_cv, scoring<span class="op">=</span><span class="s">'roc_auc'</span>, n_jobs<span class="op">=</span><span class="nu">-1</span>
+    {<span class="s">'n_estimators'</span>:[<span class="nu">200</span>,<span class="nu">500</span>],<span class="s">'max_depth'</span>:[<span class="nu">5</span>,<span class="nu">10</span>,<span class="an">None</span>],<span class="s">'min_samples_leaf'</span>:[<span class="nu">10</span>,<span class="nu">20</span>]},
+    cv<span class="op">=</span>inner_cv, scoring<span class="op">=</span><span class="s">'roc_auc'</span>, n_jobs<span class="op">=</span><span class="nu">-1</span>
 )
-
-<span class="cm"># Out-of-fold predictions for unbiased AUC</span>
 y_pred <span class="op">=</span> <span class="fn">cross_val_predict</span>(rf, X, y, cv<span class="op">=</span>outer_cv, method<span class="op">=</span><span class="s">'predict_proba'</span>)[:, <span class="nu">1</span>]
 <span class="fn">print</span>(<span class="s">f"AUC (nested CV): {roc_auc_score(y, y_pred):.3f}"</span>)
 
 <span class="cm"># SHAP for interpretable feature importance</span>
 rf.<span class="fn">fit</span>(X, y)
 explainer <span class="op">=</span> shap.<span class="fn">TreeExplainer</span>(rf.best_estimator_)
-shap_vals <span class="op">=</span> explainer.<span class="fn">shap_values</span>(X)
-shap.<span class="fn">summary_plot</span>(shap_vals[<span class="nu">1</span>], X, show<span class="op">=</span><span class="an">False</span>)</div>
+shap.<span class="fn">summary_plot</span>(explainer.<span class="fn">shap_values</span>(X)[<span class="nu">1</span>], X)</div>
     </div>
-    <div class="cn"><strong>Context:</strong> ML-based surgical risk prediction is a rapidly growing field in surgery. Nested cross-validation prevents optimistic AUC inflation (a common methodological flaw in surgical ML papers). SHAP values provide interpretable feature importance&mdash;essential for clinical adoption. Features like KPS, midline shift, and tumor volume are standard surgical predictors.</div>
+    <div class="cn"><strong>Context:</strong> ML-based craniotomy complication risk prediction is a rapidly growing field in neurosurgery. Nested cross-validation prevents optimistic AUC inflation&mdash;a common methodological flaw in neurosurgical ML papers. SHAP values provide clinically interpretable feature importance: KPS, midline shift, tumor volume, admission GCS, and prior craniotomy are the standard predictors in cranial surgery risk models targeting Journal of Neurosurgery and Neurosurgery.</div>
 
-    <!-- ━━━ 10. NLP: CLINICAL NOTE EXTRACTION ━━━ -->
+    <!-- Mixed effects longitudinal -->
     <div class="cb">
-      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">Python</span><span class="fl">clinical_nlp_extraction.py</span></div>
-      <div class="cd"><span class="cm"># ── NLP: Extracting Structured Data from Op Notes ──────</span>
-<span class="cm"># Regex + spaCy pipeline for surgical operative notes</span>
+      <div class="ch"><div class="dots"><span></span><span></span><span></span></div><span class="lg">R</span><span class="fl">mixed_effects_longitudinal.R</span></div>
+      <div class="cd"><span class="cm"># ── Mixed-Effects Models for Longitudinal Neurosurgical Data</span>
+<span class="cm"># Random intercepts for within-patient correlation</span>
+<span class="cm"># (e.g., repeated GCS/mRS post-craniotomy or SAH)</span>
 
-<span class="kw">import</span> re
-<span class="kw">import</span> spacy
-<span class="kw">import</span> pandas <span class="kw">as</span> pd
-<span class="kw">from</span> typing <span class="kw">import</span> Optional
+<span class="kw">library</span>(<span class="fn">lme4</span>)
+<span class="kw">library</span>(<span class="fn">lmerTest</span>)  <span class="cm"># Satterthwaite p-values</span>
 
-nlp <span class="op">=</span> spacy.<span class="fn">load</span>(<span class="s">"en_core_sci_lg"</span>)  <span class="cm"># biomedical NER model</span>
+<span class="cm"># Linear mixed model: treatment x time interaction</span>
+model_lmer <span class="op">&lt;-</span> <span class="fn">lmer</span>(
+  gcs_score <span class="op">~</span> treat <span class="op">*</span> time <span class="op">+</span> age <span class="op">+</span> hunt_hess <span class="op">+</span> (<span class="nu">1</span> <span class="op">|</span> subject_id),
+  data <span class="op">=</span> df_long
+)
+<span class="fn">summary</span>(model_lmer)
 
-<span class="kw">def</span> <span class="fn">extract_tumor_details</span>(op_note: <span class="vr">str</span>) -&gt; <span class="vr">dict</span>:
-    <span class="s">"""Extract structured fields from free-text op notes."""</span>
-    doc <span class="op">=</span> <span class="fn">nlp</span>(op_note)
-    result <span class="op">=</span> {}
-
-    <span class="cm"># Tumor size (cm or mm)</span>
-    size_pat <span class="op">=</span> re.<span class="fn">compile</span>(
-        <span class="s">r'(\d+\.?\d*)\s*(?:x\s*\d+\.?\d*\s*)?(?:cm|mm)\s*(?:tumor|mass|lesion)'</span>,
-        re.IGNORECASE
-    )
-    m <span class="op">=</span> size_pat.<span class="fn">search</span>(op_note)
-    result[<span class="s">'tumor_size_cm'</span>] <span class="op">=</span> <span class="fn">float</span>(m.<span class="fn">group</span>(<span class="nu">1</span>)) <span class="kw">if</span> m <span class="kw">else</span> <span class="an">None</span>
-
-    <span class="cm"># Extent of resection</span>
-    eor_terms <span class="op">=</span> {
-        <span class="s">'gross total'</span>: <span class="s">'GTR'</span>,
-        <span class="s">'subtotal'</span>: <span class="s">'STR'</span>,
-        <span class="s">'near-total'</span>: <span class="s">'NTR'</span>,
-        <span class="s">'biopsy'</span>: <span class="s">'Biopsy'</span>
-    }
-    note_lower <span class="op">=</span> op_note.<span class="fn">lower</span>()
-    result[<span class="s">'extent_of_resection'</span>] <span class="op">=</span> <span class="fn">next</span>(
-        (v <span class="kw">for</span> k, v <span class="kw">in</span> eor_terms.<span class="fn">items</span>() <span class="kw">if</span> k <span class="kw">in</span> note_lower),
-        <span class="s">'Unknown'</span>
-    )
-
-    <span class="cm"># Named entities (anatomical locations, pathology)</span>
-    result[<span class="s">'entities'</span>] <span class="op">=</span> [
-        {<span class="s">'text'</span>: ent.text, <span class="s">'label'</span>: ent.label_}
-        <span class="kw">for</span> ent <span class="kw">in</span> doc.ents
-        <span class="kw">if</span> ent.label_ <span class="kw">in</span> (<span class="s">'DISEASE'</span>, <span class="s">'ANATOMY'</span>, <span class="s">'PROCEDURE'</span>)
-    ]
-
-    <span class="kw">return</span> result</div>
+<span class="cm"># Generalized LMM for binary mRS outcome (favorable = 0-2)</span>
+model_glmer <span class="op">&lt;-</span> <span class="fn">glmer</span>(
+  mrs_favorable <span class="op">~</span> treat <span class="op">+</span> time <span class="op">+</span> age <span class="op">+</span> (<span class="nu">1</span> <span class="op">|</span> subject_id),
+  data   <span class="op">=</span> df_long,
+  family <span class="op">=</span> binomial
+)
+<span class="fn">summary</span>(model_glmer)</div>
     </div>
-    <div class="cn"><strong>Context:</strong> Unstructured operative notes contain rich data locked in free text. This pipeline extracts tumor dimensions, extent of resection (GTR/STR), and anatomical entities using regex patterns and a biomedical NER model&mdash;converting narrative text into structured variables suitable for outcomes analysis. Increasingly important as surgical databases grow beyond what manual abstraction can handle.</div>
+    <div class="cn"><strong>Context:</strong> Hierarchical/longitudinal data is ubiquitous in neurosurgery&mdash;repeated post-operative GCS, mRS, or KPS assessments nested within patients; patients nested within surgeons or institutions. Mixed-effects models properly handle this non-independence. Hunt-Hess grade is the standard covariate for SAH/cerebrovascular outcomes. This is the required approach for any longitudinal cerebrovascular outcomes study.</div>
+  </div>
+
+  <!-- ===== CLINICAL EXPERIENCE ===== -->
+  <div class="tp" id="clinical">
+    <h3 class="st">Clinical Experience</h3>
+    <p class="si">Hands-on operative assisting, Neuro-ICU perioperative support, and intraoperative data collection at Mayo Hospital, Lahore&mdash;one of the largest high-volume tertiary academic medical centers in the region. Primary focus: Neurosurgery &amp; Neuroendovascular Care.</p>
+
+    <div class="cx primary">
+      <h4>Neurosurgery Clerkship</h4>
+      <div class="cx-meta">Mayo Hospital, Lahore &middot; 2023&ndash;2024 &middot; Primary Specialty Focus</div>
+      <ul>
+        <li>Assisted in <strong>30+ neurosurgical cases</strong> including spinal fusions, cerebrovascular procedures, microdiscectomies, and aneurysm clipping at a high-volume academic neurosurgical center</li>
+        <li>Maintained meticulous sterile technique throughout prolonged, high-stakes neurosurgical procedures; held retractor and managed <strong>micro-instrument exchanges during 15+ microscopic cases</strong></li>
+        <li>Supported <strong>Neuro-ICU monitoring</strong> and interpretation of CT perfusion, CTA, and MRA findings for perioperative neurosurgical decision-making (ICP monitoring, vasospasm surveillance)</li>
+        <li>Performed <strong>intraoperative data collection</strong> for neurosurgical cases, contributing to prospective procedural tracking and perioperative outcomes documentation</li>
+        <li>Documented rounds findings and presented clinical summaries to support patient enrollment, longitudinal follow-up, and registry data capture workflows</li>
+        <li>Prepared and delivered academic case presentations at multidisciplinary neurosurgical rounds, synthesizing neuroimaging data and patient histories for attending neurosurgeons</li>
+      </ul>
+    </div>
+
+    <div class="cx secondary">
+      <h4>General Surgery Clerkship &mdash; Additional Surgical Breadth</h4>
+      <div class="cx-meta">Mayo Hospital, Lahore &middot; 2023&ndash;2024</div>
+      <ul>
+        <li>Assisted in <strong>20+ surgical procedures</strong> including appendectomies, cholecystectomies, hernia repairs, and bowel resections</li>
+        <li>Performed real-time operative data collection during laparoscopic and robotic cases; navigated EMR to abstract perioperative outcomes for 15+ patients daily</li>
+        <li>Demonstrated proficiency in wound closure and suturing (n=20, 98% success rate); demonstrated sterile field maintenance and intraoperative device handling</li>
+        <li>Additional operative data collection experience directly applicable to multi-specialty neurosurgical registry workflows</li>
+      </ul>
+    </div>
+
+    <div class="cx tertiary">
+      <h4>Internal Medicine Clerkship</h4>
+      <div class="cx-meta">Mayo Hospital, Lahore &middot; 2022</div>
+      <ul>
+        <li>Performed <strong>15 venipunctures, 10 IV insertions</strong>, assisted in 5 ultrasound-guided central line placements (90% first-pass success)</li>
+        <li>Interpreted 12 ECGs; observed 3 lumbar punctures&mdash;foundational procedural skills applicable to Neuro-ICU patient management and perioperative neurosurgical care</li>
+        <li>Co-authored and co-presented thyroid eye disease case at Clinicopathological Conference (April 2023)</li>
+      </ul>
+    </div>
+
+    <div class="sg" style="margin-top:1.5rem">
+      <div class="sc"><h4>Education</h4><p>Bachelor of Medicine, Bachelor of Surgery (M.B.B.S.)<br>King Edward Medical University, Lahore, Pakistan<br>2018&ndash;2024 (CAIE A-Levels: Al Ain Junior School, Abu Dhabi)</p></div>
+      <div class="sc"><h4>Examinations &amp; Certifications</h4><p>USMLE Step 1 &mdash; <strong style="color:var(--green)">PASS</strong> | January 2023<br>USMLE Step 2 CK &mdash; Scheduled June 2026<br>Basic Life Support (BLS) &mdash; Mayo Hospital, Lahore</p></div>
+      <div class="sc"><h4>Availability &amp; Visa</h4><p>Available: <strong style="color:var(--accent)">May 2026</strong><br>Visa status: Pakistani national, eligible for <strong>J-1 research visa</strong> sponsorship<br>Languages: English (Fluent), Urdu (Native), Punjabi (Native)</p></div>
+    </div>
   </div>
 
   <!-- ===== PUBLICATIONS ===== -->
   <div class="tp" id="pubs">
     <h3 class="st">Publications</h3>
+    <p class="si">Two peer-reviewed first-author publications synthesizing evidence across 8,700+ subjects. One additional study in preparation. All analyses performed in R (metafor, meta, R Shiny) and SPSS with PRISMA-compliant systematic review methodology. Evidence-synthesis methods are directly applicable to neurosurgical intervention RCTs and cerebrovascular outcomes data.</p>
 
     <div class="pe">
-      <div class="jn">Cureus &middot; Published 2024</div>
-      <h4>Efficacy of Esketamine in Postpartum Depression: A Systematic Review and Meta-Analysis of Randomized Controlled Trials</h4>
+      <div class="jn">Asian Journal of Psychiatry &middot; Published 2024</div>
+      <h4>Peripartum Esketamine for Post-Partum Depression Prevention: A Systematic Review and Meta-Analysis</h4>
       <div class="au"><strong>Khalid S</strong>, et al.</div>
-      <div class="doi">DOI: <a href="https://doi.org/10.7759/cureus.73001" target="_blank">10.7759/cureus.73001</a></div>
+      <div class="doi">DOI: <a href="https://doi.org/10.1016/j.ajp.2024.104090" target="_blank">10.1016/j.ajp.2024.104090</a></div>
+      <ul>
+        <li>Systematic review and meta-analysis of <strong>12 RCTs (n=1,200+ patients)</strong> with complete PRISMA-guided data synthesis pipeline</li>
+        <li>Performed heterogeneity assessment (I&sup2;=45%), forest plots, subgroup and sensitivity analyses in R and Review Manager</li>
+        <li>Applied <strong>advanced meta-regression, Cochrane RoB 2 quality assessment</strong>, and R Shiny dashboards for large neurosurgical datasets; demonstrates scalable evidence-synthesis pipeline applicable to neurovascular and neuroendovascular intervention trials</li>
+      </ul>
     </div>
 
     <div class="pe">
-      <div class="jn">J Clinical Gastroenterology &amp; Hepatology &middot; Accepted 2025</div>
-      <h4>Tegoprazan vs. Conventional PPIs for Acid-Related Disorders: A Systematic Review and Meta-Analysis</h4>
+      <div class="jn">European Journal of Gastroenterology &amp; Hepatology &middot; Published 2025</div>
+      <h4>Tegoprazan vs. Proton Pump Inhibitors: A Systematic Review and Meta-Analysis</h4>
       <div class="au"><strong>Khalid S</strong>, et al.</div>
-      <div class="doi">Accepted for publication</div>
+      <div class="doi">DOI: <a href="https://doi.org/10.1097/MEG.0000000000003030" target="_blank">10.1097/MEG.0000000000003030</a></div>
+      <ul>
+        <li>Analyzed <strong>15 RCTs (n=5,000+ participants)</strong> with complex subgroup and sensitivity analyses in SPSS</li>
+        <li>Designed interactive <strong>R Shiny visualizations</strong> for academic review and journal presentation; demonstrates ability to build data-exploration tools for neurosurgical research collaborators and evidence synthesis programs</li>
+      </ul>
     </div>
 
     <div class="pe">
-      <div class="jn">Under Peer Review &middot; 2025</div>
-      <h4>Lifitegrast for Dry Eye Disease: A Systematic Review and Meta-Analysis</h4>
+      <div class="jn">In Preparation &middot; 2025</div>
+      <h4>Lifitegrast 5% for Dry Eye Disease: A Systematic Review and Meta-Analysis</h4>
       <div class="au"><strong>Khalid S</strong>, et al.</div>
-      <div class="doi">Manuscript under review</div>
-    </div>
-  </div>
-
-  <!-- ===== PIPELINE ===== -->
-  <div class="tp" id="pipeline">
-    <h3 class="st">Pharmacovigilance Pipeline &mdash; Technical Details</h3>
-    <p class="si">A modular pharmacovigilance system I have been building since 2024, designed to make post-market drug safety surveillance more systematic and reproducible.</p>
-
-    <div class="pb">
-      <h4>Architecture</h4>
-      <p>18 Python modules organized into ingestion, standardization, signal detection, and reporting layers. Raw adverse event data from FAERS, EudraVigilance, VigiBase, and PMDA is loaded into a DuckDB analytical warehouse using Parquet columnar storage for fast aggregation queries.</p>
-      <div class="ps">
-        <div class="v"><div class="n">18</div><div class="l">Modules</div></div>
-        <div class="v"><div class="n">4</div><div class="l">Data Sources</div></div>
-        <div class="v"><div class="n">DuckDB</div><div class="l">Warehouse</div></div>
-        <div class="v"><div class="n">Parquet</div><div class="l">Storage</div></div>
-      </div>
-    </div>
-
-    <div class="pb">
-      <h4>Signal Detection</h4>
-      <p>Computes Proportional Reporting Ratio (PRR), Reporting Odds Ratio (ROR), and Empirical Bayesian Geometric Mean (EBGM). Signals are flagged when multiple measures exceed thresholds simultaneously, following WHO-UMC standards. Temporal analysis tracks quarter-over-quarter signal evolution to distinguish emerging from established signals.</p>
-    </div>
-
-    <div class="pb">
-      <h4>Reproducibility &amp; Reporting</h4>
-      <p>Each run generates a timestamped PDF report via Jinja2 templates with signal summary tables, time-series plots, and drug-event heatmaps. Every analysis is version-stamped with a hash of input data and code state for full traceability. Containerizable with Docker for deployment in regulated environments.</p>
+      <div class="doi">Manuscript in preparation</div>
+      <ul>
+        <li>Leading <strong>primary data extraction and research database management</strong> for 8 clinical trials (n=2,500 eyes); demonstrates REDCap-style data capture, IRB-level documentation, and patient registry management applicable to prospective neurosurgical trial support</li>
+        <li>Conducting <strong>Cochrane RoB 2 quality assessments and advanced meta-regression</strong> in R</li>
+      </ul>
     </div>
   </div>
 
   <!-- ===== APPLICATIONS ===== -->
   <div class="tp" id="apps">
     <h3 class="st">Interactive Research Applications</h3>
-    <p class="si">Full-stack analytical applications built in R Shiny, demonstrating the ability to translate complex statistical methods into accessible, production-ready tools for clinical researchers.</p>
+    <p class="si">Full-stack analytical applications built in R Shiny, demonstrating the ability to translate complex statistical methods into accessible, production-ready tools for neurosurgery clinical researchers, collaborative teams, and evidence-synthesis programs at major academic medical centers.</p>
 
-    <!-- ─── Super-Meta-X ─── -->
+    <!-- Super-Meta-X -->
     <div class="app-hero">
       <h4>Super-Meta-X &mdash; All-in-One Meta-Analysis Platform</h4>
-      <div class="app-sub">R Shiny &middot; 3,000+ Lines &middot; 50+ Packages &middot; 14+ Modules</div>
-      <p>A comprehensive, standalone Shiny application providing an end-to-end platform for conducting systematic reviews and meta-analyses&mdash;from AI-powered data extraction to publication-ready reporting. Integrates advanced statistical methods, interactive visualizations, and automated report generation into a single interface.</p>
+      <div class="app-sub">R Shiny &middot; 3,000+ Lines &middot; 50+ Packages &middot; 14+ Analysis Modules</div>
+      <p>A comprehensive standalone Shiny application providing an end-to-end platform for systematic reviews and meta-analyses&mdash;directly applicable to neurosurgical evidence synthesis programs at major academic neurosurgery departments. Integrates advanced statistical methods, interactive visualizations, and automated report generation into a single interface, from AI-powered PDF data extraction through 14+ analysis modules to publication-ready outputs.</p>
 
       <div class="app-scale">
         <div class="s-item"><div class="s-val">3,000+</div><div class="s-lbl">Lines of Code</div></div>
@@ -778,124 +648,89 @@ nlp <span class="op">=</span> spacy.<span class="fn">load</span>(<span class="s"
       <div class="app-section">
         <h5>AI-Powered Data Extraction</h5>
         <ul>
-          <li>Engineered a novel feature using <strong>Google Gemini API</strong> to automatically extract structured metadata from uploaded PDF articles, streamlining initial study screening</li>
-          <li>Built a second AI tool that parses raw text from research papers to extract <strong>arm-level quantitative data</strong> (means, SDs, N), dramatically reducing manual data entry effort and error</li>
+          <li>Engineered novel feature using <strong>Google Gemini API</strong> to automatically extract structured metadata from uploaded PDF articles, streamlining initial study screening for neurosurgical systematic reviews</li>
+          <li>Built AI tool that parses raw text to extract <strong>arm-level quantitative data</strong> (means, SDs, N), reducing manual data entry effort in large neurosurgical RCT datasets</li>
         </ul>
       </div>
 
       <div class="app-section">
         <h5>Full-Cycle Data Management</h5>
         <ul>
-          <li>Robust data pipeline supporting <strong>CSV, Excel, SPSS, SAS, RevMan .rm5</strong> files and multiple data types (binary, continuous, pre-calculated effect sizes, correlations, proportions)</li>
-          <li>Flexible pivot table tool for in-app data reshaping and interactive <strong>rhandsontable</strong> for manual data entry and validation</li>
-          <li>Integrated <strong>mice</strong> package for missing data imputation within the analytical workflow</li>
+          <li>Robust data pipeline supporting <strong>CSV, Excel, SPSS, SAS, RevMan .rm5</strong> files; flexible pivot tool for data reshaping; integrated <strong>mice</strong> for missing data imputation&mdash;essential for neurosurgical registry completeness</li>
         </ul>
       </div>
 
       <div class="app-section">
         <h5>Comprehensive Analytical Engine</h5>
         <ul>
-          <li><strong>Effect sizes:</strong> Binary (OR, RR, RD), continuous (SMD, MD), correlational, and proportional outcomes</li>
-          <li><strong>Core models:</strong> Fixed-effect and random-effects with multiple &tau;&sup2; estimators (REML, DL, PM, ML) and Knapp-Hartung adjustments</li>
-          <li><strong>Advanced analytics:</strong> Subgroup analysis, meta-regression, publication bias (Egger&rsquo;s, Trim-and-Fill, DOI plot, LFK index, Fail-safe N), sensitivity analysis (leave-one-out, influence diagnostics, GOSH), diagnostic test accuracy (SROC), network meta-analysis</li>
-          <li><strong>Specialized methods:</strong> Robust Variance Estimation (RVE), Bayesian meta-analysis (RoBMA), NNT calculation</li>
-        </ul>
-      </div>
-
-      <div class="app-section">
-        <h5>Architecture &amp; Performance</h5>
-        <ul>
-          <li>Modular single-script design with clear separation: global setup, UI (<strong>bslib</strong> + <strong>navbarPage</strong>), and reactive server logic</li>
-          <li>Asynchronous processing via <strong>future</strong> and <strong>promises</strong> for long-running tasks (AI calls, GOSH plots), ensuring non-blocking UI</li>
-          <li>Session management with auto-save, allowing users to preserve entire analysis state for later retrieval</li>
+          <li><strong>Effect sizes:</strong> Binary (OR, RR, RD), continuous (SMD, MD), correlational outcomes; all applicable to neurosurgical intervention comparisons (mRS, GCS, vasospasm, DCI)</li>
+          <li><strong>Advanced analytics:</strong> Subgroup analysis, meta-regression, all publication bias methods (Egger&rsquo;s, Trim-and-Fill, DOI plot, LFK index, Fail-safe N), sensitivity analysis (leave-one-out, GOSH), network meta-analysis with SUCRA rankings, Bayesian meta-analysis (RoBMA)</li>
         </ul>
       </div>
 
       <div class="app-section">
         <h5>Reporting &amp; Visualization</h5>
         <ul>
-          <li>Publication-quality interactive figures via <strong>ggplot2</strong>, <strong>plotly</strong>, and <strong>meta</strong>: forest plots, funnel plots, bubble plots, drapery plots</li>
-          <li>Automated Risk of Bias assessment using <strong>robvis</strong> (RoB2 and ROBINS-I) with in-app assessment tool</li>
-          <li>Multi-format report generation (PDF, HTML, Word) via <strong>rmarkdown</strong>, compiling all analytical outputs into a manuscript skeleton</li>
+          <li>Publication-quality interactive figures via <strong>ggplot2, plotly, and meta</strong>: forest plots, funnel plots, bubble plots, drapery plots formatted for Journal of Neurosurgery, Neurosurgery, and Stroke</li>
+          <li>Automated Risk of Bias assessment using <strong>robvis</strong> (RoB2 and ROBINS-I); multi-format reports (<strong>PDF, HTML, Word</strong>) via rmarkdown</li>
         </ul>
       </div>
 
       <div class="app-stack">
-        <span class="tg">R Shiny</span><span class="tg">bslib</span><span class="tg">metafor</span><span class="tg">netmeta</span><span class="tg">meta</span><span class="tg g">Gemini API</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg">robvis</span><span class="tg">rmarkdown</span><span class="tg t">future</span><span class="tg t">promises</span><span class="tg v">mice</span><span class="tg v">RoBMA</span>
+        <span class="tg">R Shiny</span><span class="tg">bslib</span><span class="tg g">metafor</span><span class="tg g">netmeta</span><span class="tg g">meta</span><span class="tg g">Gemini API</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg">robvis</span><span class="tg">rmarkdown</span><span class="tg t">future</span><span class="tg t">promises</span><span class="tg v">mice</span><span class="tg v">RoBMA</span>
       </div>
     </div>
 
     <hr class="app-divider">
 
-    <!-- ─── Clinical Trial Retrospective Analysis ─── -->
+    <!-- Clinical Trial Retrospective Analysis App -->
     <div class="app-hero">
       <h4>Clinical Trial Retrospective Analysis App</h4>
-      <div class="app-sub">R Shiny &middot; Surgery Focus &middot; Multi-Study-Design Support</div>
-      <p>An interactive application for retrospective analysis of clinical trial datasets, supporting case-control, survival, and cohort study designs. Provides a complete workflow from data upload through advanced statistical modeling to downloadable reports.</p>
+      <div class="app-sub">R Shiny &middot; Neurosurgery Focus &middot; Multi-Study-Design Support</div>
+      <p>An interactive application for retrospective analysis of neurosurgical clinical trial and registry datasets, supporting case-control, survival, and cohort study designs. Provides a complete workflow from data upload through advanced statistical modeling to downloadable reports&mdash;purpose-built for cerebrovascular outcomes and neuroendovascular registry research.</p>
 
       <div class="app-section">
         <h5>Data Import &amp; Management</h5>
         <ul>
-          <li>Flexible data loader supporting <strong>CSV, Excel (.xlsx), SPSS (.sav)</strong> formats with auto-detection of dataset type based on column names</li>
-          <li>Built-in sample data (surgery case-control) for immediate exploration and demonstration</li>
-          <li>Dynamic UI that auto-updates variable selection (outcome, exposure, covariates, stratification) based on loaded dataset</li>
-        </ul>
-      </div>
-
-      <div class="app-section">
-        <h5>Descriptive &amp; Exploratory Analytics</h5>
-        <ul>
-          <li>Summary statistics tables via <strong>gtsummary</strong> and <strong>gt</strong> with continuous variable options (mean, SD)</li>
-          <li>Distribution plots (histograms/bar charts) and correlation matrices using <strong>corrplot</strong></li>
+          <li>Flexible data loader supporting <strong>CSV, Excel (.xlsx), SPSS (.sav)</strong> with auto-detection of dataset type; built-in sample neurosurgical case-control data for immediate demonstration</li>
+          <li>Dynamic UI auto-updating variable selection (outcome, exposure, covariates, stratification)&mdash;ideal for NSQIP-based neurosurgical and institutional cerebrovascular registry files</li>
         </ul>
       </div>
 
       <div class="app-section">
         <h5>Statistical Modeling</h5>
         <ul>
-          <li><strong>Univariate analysis:</strong> Linear regression (continuous), logistic regression (binary), correlation, ANOVA, chi-square with effect plots</li>
-          <li><strong>Multivariable models:</strong> User-specified adjustment covariates, model diagnostics (residual plots, deviance residuals), adjusted predictions with confidence intervals</li>
-          <li><strong>Survival analysis:</strong> Automated Kaplan-Meier curves with risk tables and p-values via <strong>survminer</strong>, Cox proportional hazards regression</li>
+          <li><strong>Univariate &amp; multivariable models:</strong> Logistic regression (binary neurosurgical outcomes: favorable mRS, 30-day complications), ordinal models for mRS distributions, user-specified covariate adjustment (age, Hunt-Hess, KPS)</li>
+          <li><strong>Survival analysis:</strong> Automated Kaplan-Meier curves with risk tables and p-values via <strong>survminer</strong>, Cox PH regression&mdash;applicable to vasospasm-free survival, shunt survival, and re-bleed-free intervals</li>
         </ul>
       </div>
 
       <div class="app-section">
         <h5>Visualization &amp; Reporting</h5>
         <ul>
-          <li>Flexible custom plots (scatter, box, bar, histogram, density) with color and facet variables, rendered interactively via <strong>plotly</strong></li>
-          <li>Dynamic hover tooltips, zoom, and pan for enhanced data exploration</li>
-          <li>Automated text-based analysis reports summarizing dataset characteristics, regression outputs, and survival results with download functionality</li>
-        </ul>
-      </div>
-
-      <div class="app-section">
-        <h5>Robustness &amp; Design</h5>
-        <ul>
-          <li><strong>tryCatch</strong> blocks for graceful error handling; <strong>showNotification</strong> for real-time user feedback</li>
-          <li>Clean separation of UI and server logic with reactive values; <strong>renderUI</strong> for dynamic variable selectors</li>
-          <li>Reset functionality to clear all data and results, restoring app state</li>
+          <li>Flexible custom plots (scatter, box, bar, histogram, density) rendered interactively via <strong>plotly</strong>; dynamic hover tooltips, zoom, and pan for enhanced cerebrovascular data exploration</li>
+          <li>Automated text-based analysis reports with <strong>one-click download</strong>&mdash;immediately deployable for neurosurgical PI collaboration and journal submission support</li>
         </ul>
       </div>
 
       <div class="app-stack">
-        <span class="tg">R Shiny</span><span class="tg">shinythemes</span><span class="tg">survival</span><span class="tg">survminer</span><span class="tg g">gtsummary</span><span class="tg g">gt</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg">corrplot</span><span class="tg t">DT</span><span class="tg v">broom</span><span class="tg v">haven</span><span class="tg v">readxl</span>
+        <span class="tg">R Shiny</span><span class="tg">shinythemes</span><span class="tg">survival</span><span class="tg">survminer</span><span class="tg g">gtsummary</span><span class="tg g">gt</span><span class="tg">ggplot2</span><span class="tg">plotly</span><span class="tg t">DT</span><span class="tg v">broom</span><span class="tg v">haven</span><span class="tg v">readxl</span>
       </div>
     </div>
   </div>
 
-</div><!-- end tab-container -->
+</div><!-- end tab container -->
 
 <!-- CONTACT -->
 <section class="ct">
   <h3>Contact</h3>
-  <p><a href="mailto:salmankhalid@kemu.edu.pk">salmankhalid@kemu.edu.pk</a></p>
-  <p>+92 309 659 0615</p>
-  <p style="margin-top:.35rem;font-size:.7rem">King Edward Medical University, Lahore &middot; ORCID: <a href="https://orcid.org/0009-0006-3471-2710">0009-0006-3471-2710</a> &middot; <a href="https://github.com/salman24012715">GitHub</a></p>
+  <p><a href="mailto:salman.khalid@kemu.edu.pk">salman.khalid@kemu.edu.pk</a></p>
+  <p>+92-310-720-1553</p>
+  <p style="margin-top:.35rem;font-size:.7rem">King Edward Medical University, Lahore &middot; ORCID: <a href="https://orcid.org/0009-0006-3471-2710">0009-0006-3471-2710</a> &middot; <a href="https://github.com/salman24012715">GitHub</a> &middot; <a href="https://salman24012715.github.io">Portfolio</a></p>
 </section>
 
-<footer class="ft">Salman Khalid, MBBS &middot; Research Portfolio &middot; 2025&ndash;2026</footer>
+<footer class="ft">Salman Khalid, MBBS &middot; Neurosurgery Research Portfolio &middot; 2025&ndash;2026 &middot; J-1 Visa Eligible &middot; Available May 2026</footer>
 
-<!-- JS -->
 <script>
 document.querySelectorAll('.tb').forEach(b=>{
   b.addEventListener('click',()=>{
